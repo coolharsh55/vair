@@ -1,0 +1,2984 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix airo: <https://w3id.org/airo#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix vair: <https://w3id.org/vair#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+
+skos:Concept
+    a owl:Class .
+
+skos:definition
+    a owl:AnnotationProperty .
+
+skos:inScheme
+    a owl:AnnotationProperty .
+
+skos:prefLabel
+    a owl:AnnotationProperty .
+
+skos:related
+    a owl:AnnotationProperty .
+
+airo:AIComponent
+    a owl:Class .
+
+airo:AILifecyclePhase
+    a owl:Class .
+
+airo:AIOperator
+    a owl:Class .
+
+airo:AIProvider
+    a owl:Class .
+
+airo:AISubject
+    a owl:Class .
+
+airo:AISystem
+    a owl:Class .
+
+airo:AISystemForm
+    a owl:Class .
+
+airo:AIUser
+    a owl:Class .
+
+airo:Algorithm
+    a owl:Class .
+
+airo:Capability
+    a owl:Class .
+
+airo:Consequence
+    a owl:Class .
+
+airo:DataRiskSource
+    a owl:Class .
+
+airo:DetectionControl
+    a owl:Class .
+
+airo:Domain
+    a owl:Class .
+
+airo:Impact
+    a owl:Class .
+
+airo:ImpactedArea
+    a owl:Class .
+
+airo:InputDataRiskSource
+    a owl:Class .
+
+airo:ManualControl
+    a owl:Class .
+
+airo:MitigationControl
+    a owl:Class .
+
+airo:OperationalControl
+    a owl:Class .
+
+airo:OrganisationalControl
+    a owl:Class .
+
+airo:OrganisationalRiskSource
+    a owl:Class .
+
+airo:Output
+    a owl:Class .
+
+airo:PerfomanceRiskSource
+    a owl:Class .
+
+airo:Purpose
+    a owl:Class .
+
+airo:RiskSource
+    a owl:Class .
+
+airo:SemiAutomatedControl
+    a owl:Class .
+
+airo:Stakeholder
+    a owl:Class .
+
+airo:SystemRiskSource
+    a owl:Class .
+
+airo:Technique
+    a owl:Class .
+
+airo:TestDataRiskSource
+    a owl:Class .
+
+airo:TrainingDataRiskSource
+    a owl:Class .
+
+airo:ValidationDataRiskSource
+    a owl:Class .
+
+airo:WellbeingImpact
+    a owl:Class .
+
+<https://w3id.org/vair#>
+    a owl:NamedIndividual, skos:Concept, vair:Concept ;
+    rdfs:isDefinedBy <https://w3id.org/vair#> ;
+    skos:definition ""@en ;
+    skos:inScheme <https://w3id.org/vair#> ;
+    skos:prefLabel ""@en .
+
+vair:AGI
+    a owl:Class, owl:NamedIndividual, skos:Concept, vair:Concept ;
+    rdfs:isDefinedBy <https://w3id.org/vair#> ;
+    rdfs:subClassOf airo:AISystem ;
+    skos:definition "artificial general intelligence"@en ;
+    skos:inScheme <https://w3id.org/vair#> ;
+    skos:prefLabel "AGI"@en ;
+    skos:related vair:GeneralAI .
+
+vair:AIComponent
+    a owl:NamedIndividual, skos:Concept, vair:Concept ;
+    rdfs:isDefinedBy <https://w3id.org/vair#> ;
+    skos:definition "functional element that constructs an AI system. [ISo/IEC 22989, 3.1.2]"@en ;
+    skos:inScheme <https://w3id.org/vair#> ;
+    skos:prefLabel "AI Component"@en .
+
+vair:Action
+    a owl:Class, owl:NamedIndividual, skos:Concept, vair:Concept ;
+    rdfs:isDefinedBy <https://w3id.org/vair#> ;
+    rdfs:subClassOf airo:Output ;
+    skos:definition ""@en ;
+    skos:inScheme <https://w3id.org/vair#> ;
+    skos:prefLabel "Action"@en .
+
+vair:ActionRecognition
+    a owl:Class, owl:NamedIndividual, skos:Concept, vair:Concept ;
+    rdfs:isDefinedBy <https://w3id.org/vair#> ;
+    rdfs:subClassOf airo:Capability ;
+    skos:definition ""@en ;
+    skos:inScheme <https://w3id.org/vair#> ;
+    skos:prefLabel "Action Recognition"@en .
+
+vair:AdministrationOfDemocraticProcesses
+    a owl:Class, owl:NamedIndividual, skos:Concept, vair:Concept ;
+    rdfs:isDefinedBy <https://w3id.org/vair#> ;
+    rdfs:subClassOf airo:Domain ;
+    skos:definition ""@en ;
+    skos:inScheme <https://w3id.org/vair#> ;
+    skos:prefLabel "Administration Of Democratic Processes"@en .
+
+vair:AdministrationOfJustice
+    a owl:Class, owl:NamedIndividual, skos:Concept, vair:Concept ;
+    rdfs:isDefinedBy <https://w3id.org/vair#> ;
+    rdfs:subClassOf airo:Domain ;
+    skos:definition ""@en ;
+    skos:inScheme <https://w3id.org/vair#> ;
+    skos:prefLabel "Administration Of Justice"@en .
+
+vair:AdversarialAttack
+    a owl:Class, owl:NamedIndividual, skos:Concept, vair:Concept ;
+    rdfs:isDefinedBy <https://w3id.org/vair#> ;
+    rdfs:subClassOf vair:Attack ;
+    skos:definition "inputs designed to cause the model to make a mistake"@en ;
+    skos:inScheme <https://w3id.org/vair#> ;
+    skos:prefLabel "Adversarial Attack"@en ;
+    skos:related vair:Model .
+
+vair:AdvertisingVacancies
+    a owl:Class, owl:NamedIndividual, skos:Concept, vair:Concept ;
+    rdfs:isDefinedBy <https://w3id.org/vair#> ;
+    rdfs:subClassOf airo:Purpose, vair:Assessment ;
+    skos:definition ""@en ;
+    skos:inScheme <https://w3id.org/vair#> ;
+    skos:prefLabel "Advertising Vacancies"@en ;
+    skos:related vair:Employment .
+
+vair:Algorithm
+    a owl:Class, owl:NamedIndividual, skos:Concept, vair:Concept ;
+    rdfs:isDefinedBy <https://w3id.org/vair#> ;
+    rdfs:subClassOf airo:AIComponent ;
+    skos:definition ""@en ;
+    skos:inScheme <https://w3id.org/vair#> ;
+    skos:prefLabel "Algorithm"@en .
+
+vair:AllocatingTasks
+    a owl:Class, owl:NamedIndividual, skos:Concept, vair:Concept ;
+    rdfs:isDefinedBy <https://w3id.org/vair#> ;
+    rdfs:subClassOf vair:Planning ;
+    skos:definition "Assignment of tasks to persons"@en ;
+    skos:inScheme <https://w3id.org/vair#> ;
+    skos:prefLabel "Allocating Tasks"@en .
+
+vair:ApplicationScreening
+    a owl:Class, owl:NamedIndividual, skos:Concept, vair:Concept ;
+    rdfs:isDefinedBy <https://w3id.org/vair#> ;
+    rdfs:subClassOf vair:Assessment ;
+    skos:definition ""@en ;
+    skos:inScheme <https://w3id.org/vair#> ;
+    skos:prefLabel "Application Screening"@en ;
+    skos:related vair:Employment .
+
+vair:ApplicationSpecificIntegratedCircuit
+    a owl:Class, owl:NamedIndividual, skos:Concept, vair:Concept ;
+    rdfs:isDefinedBy <https://w3id.org/vair#> ;
+    rdfs:subClassOf vair:Hardware ;
+    skos:definition ""@en ;
+    skos:inScheme <https://w3id.org/vair#> ;
+    skos:prefLabel "Application Specific Integrated Circuit"@en .
+
+vair:ApplyingTheLawToFacts
+    a owl:Class, owl:NamedIndividual, skos:Concept, vair:Concept ;
+    rdfs:isDefinedBy <https://w3id.org/vair#> ;
+    rdfs:subClassOf airo:Purpose, vair:KnowledgeReasoning ;
+    skos:definition "Applying the law to a concrete set of facts"@en ;
+    skos:inScheme <https://w3id.org/vair#> ;
+    skos:prefLabel "Applying The Law To Facts"@en ;
+    skos:related vair:Law .
+
+vair:Approval
+    a owl:Class, owl:NamedIndividual, skos:Concept, vair:Concept ;
+    rdfs:isDefinedBy <https://w3id.org/vair#> ;
+    rdfs:subClassOf airo:ManualControl ;
+    skos:definition "Approval or refusual of a request, excutation of process, etc. to prevent or mitigate a risk."@en ;
+    skos:inScheme <https://w3id.org/vair#> ;
+    skos:prefLabel "Approval"@en .
+
+vair:AssesingStudent
+    a owl:Class, owl:NamedIndividual, skos:Concept, vair:Concept ;
+    rdfs:isDefinedBy <https://w3id.org/vair#> ;
+    rdfs:subClassOf vair:Assessment ;
+    skos:definition "Assessmening students in educational institutions"@en ;
+    skos:inScheme <https://w3id.org/vair#> ;
+    skos:prefLabel "Assessing Student"@en ;
+    skos:related vair:Education .
+
+vair:AssessingAdmissionTest
+    a owl:Class, owl:NamedIndividual, skos:Concept, vair:Concept ;
+    rdfs:isDefinedBy <https://w3id.org/vair#> ;
+    rdfs:subClassOf vair:Assessment ;
+    skos:definition "Assessing tests required for admission to educational institutions"@en ;
+    skos:inScheme <https://w3id.org/vair#> ;
+    skos:prefLabel "Assessing Admission Test"@en ;
+    skos:related vair:Education .
+
+vair:AssessingCreditworthiness
+    a owl:Class, owl:NamedIndividual, skos:Concept, vair:Concept ;
+    rdfs:isDefinedBy <https://w3id.org/vair#> ;
+    rdfs:subClassOf airo:Purpose, vair:Assessment ;
+    skos:definition "Evaluation the creditworthiness of natural persons or establishing their credit score"@en ;
+    skos:inScheme <https://w3id.org/vair#> ;
+    skos:prefLabel "Assessing Creditworthiness"@en ;
+    skos:related vair:Finance .
+
+vair:AssessingHealthRisk
+    a owl:Class, owl:NamedIndividual, skos:Concept, vair:Concept ;
+    rdfs:isDefinedBy <https://w3id.org/vair#> ;
+    rdfs:subClassOf airo:Purpose ;
+    skos:definition ""@en ;
+    skos:inScheme <https://w3id.org/vair#> ;
+    skos:prefLabel "Assessing Health Risk"@en ;
+    skos:related vair:LawEnforcement .
+
+vair:AssessingImmigrationEligibility
+    a owl:Class, owl:NamedIndividual, skos:Concept, vair:Concept ;
+    rdfs:isDefinedBy <https://w3id.org/vair#> ;
+    rdfs:subClassOf vair:Assessment ;
+    skos:definition "Examination of applications for asylum, visa and residence permits and associated complaints"@en ;
+    skos:inScheme <https://w3id.org/vair#> ;
+    skos:prefLabel "Assessing Immigration Eligibility"@en ;
+    skos:related vair:Migration .
+
+vair:AssessingPastCriminalBehaviour
+    a owl:Class, owl:NamedIndividual, skos:Concept, vair:Concept ;
+    rdfs:isDefinedBy <https://w3id.org/vair#> ;
+    rdfs:subClassOf airo:Purpose, vair:Assessment ;
+    skos:definition ""@en ;
+    skos:inScheme <https://w3id.org/vair#> ;
+    skos:prefLabel "Assessing Past Criminal Behaviour"@en ;
+    skos:related vair:LawEnforcement .
+
+vair:AssessingPeopleRelatedRisk
+    a owl:Class, owl:NamedIndividual, skos:Concept, vair:Concept ;
+    rdfs:isDefinedBy <https://w3id.org/vair#> ;
+    rdfs:subClassOf airo:Purpose, vair:Assessment ;
+    skos:definition ""@en ;
+    skos:inScheme <https://w3id.org/vair#> ;
+    skos:prefLabel "Assessing People Related Risk"@en .
+
+vair:AssessingPersonalityTraits
+    a owl:Class, owl:NamedIndividual, skos:Concept, vair:Concept ;
+    rdfs:isDefinedBy <https://w3id.org/vair#> ;
+    rdfs:subClassOf airo:Purpose, vair:Assessment ;
+    skos:definition ""@en ;
+    skos:inScheme <https://w3id.org/vair#> ;
+    skos:prefLabel "Assessing Personality Traits"@en .
+
+vair:AssessingRiskForPotentialVictimsOfCriminalOffences
+    a owl:Class, owl:NamedIndividual, skos:Concept, vair:Concept ;
+    rdfs:isDefinedBy <https://w3id.org/vair#> ;
+    rdfs:subClassOf airo:Purpose, vair:IndividualRiskAssessment ;
+    skos:definition ""@en ;
+    skos:inScheme <https://w3id.org/vair#> ;
+    skos:prefLabel "Assessing Risk For Potential Victims Of Criminal Offences"@en ;
+    skos:related vair:LawEnforcement .
+
+vair:AssessingRiskOfIrregularImmigration
+    a owl:Class, owl:NamedIndividual, skos:Concept, vair:Concept ;
+    rdfs:isDefinedBy <https://w3id.org/vair#> ;
+    rdfs:subClassOf airo:Purpose, vair:IndividualRiskAssessment ;
+    skos:definition ""@en ;
+    skos:inScheme <https://w3id.org/vair#> ;
+    skos:prefLabel "Assessing Risk Of Irregular Immigration"@en ;
+    skos:related vair:LawEnforcement, vair:Migration .
+
+vair:AssessingRiskOfOffending
+    a owl:Class, owl:NamedIndividual, skos:Concept, vair:Concept ;
+    rdfs:isDefinedBy <https://w3id.org/vair#> ;
+    rdfs:subClassOf airo:Purpose, vair:IndividualRiskAssessment ;
+    skos:definition ""@en ;
+    skos:inScheme <https://w3id.org/vair#> ;
+    skos:prefLabel "Assessing Risk Of Offending"@en ;
+    skos:related vair:LawEnforcement .
+
+vair:AssessingRiskOfReoffending
+    a owl:Class, owl:NamedIndividual, skos:Concept, vair:Concept ;
+    rdfs:isDefinedBy <https://w3id.org/vair#> ;
+    rdfs:subClassOf airo:Purpose, vair:IndividualRiskAssessment ;
+    skos:definition ""@en ;
+    skos:inScheme <https://w3id.org/vair#> ;
+    skos:prefLabel "Assessing Risk Of Reoffending"@en ;
+    skos:related vair:LawEnforcement .
+
+vair:AssessingSecurityRisk
+    a owl:Class, owl:NamedIndividual, skos:Concept, vair:Concept ;
+    rdfs:isDefinedBy <https://w3id.org/vair#> ;
+    rdfs:subClassOf airo:Purpose, vair:IndividualRiskAssessment ;
+    skos:definition ""@en ;
+    skos:inScheme <https://w3id.org/vair#> ;
+    skos:prefLabel "Assessing Security Risk"@en ;
+    skos:related vair:LawEnforcement .
+
+vair:Assessment
+    a owl:Class, owl:NamedIndividual, skos:Concept, vair:Concept ;
+    rdfs:isDefinedBy <https://w3id.org/vair#> ;
+    rdfs:subClassOf vair:DecisionMaking ;
+    skos:definition "Assessment and evaluation"@en ;
+    skos:inScheme <https://w3id.org/vair#> ;
+    skos:prefLabel "Assessment"@en .
+
+vair:AssigningPeopleToEducationalInstitutions
+    a owl:Class, owl:NamedIndividual, skos:Concept, vair:Concept ;
+    rdfs:isDefinedBy <https://w3id.org/vair#> ;
+    rdfs:subClassOf airo:Purpose, vair:Assessment ;
+    skos:definition "Assigning natural persons to educational and vocational training institutions or programmes at all levels."@en ;
+    skos:inScheme <https://w3id.org/vair#> ;
+    skos:prefLabel "Assigning People To Educational Institutions"@en ;
+    skos:related vair:Education .
+
+vair:Asylum
+    a owl:Class, owl:NamedIndividual, skos:Concept, vair:Concept ;
+    rdfs:isDefinedBy <https://w3id.org/vair#> ;
+    rdfs:subClassOf airo:Domain ;
+    skos:definition ""@en ;
+    skos:inScheme <https://w3id.org/vair#> ;
+    skos:prefLabel "Asylum"@en .
+
+vair:AsylumSeeker
+    a owl:Class, owl:NamedIndividual, skos:Concept, vair:Concept ;
+    rdfs:isDefinedBy <https://w3id.org/vair#> ;
+    rdfs:subClassOf airo:AISubject ;
+    skos:definition "A person who has applied for asylum"@en ;
+    skos:inScheme <https://w3id.org/vair#> ;
+    skos:prefLabel "Asylum Seeker"@en .
+
+vair:Attack
+    a owl:Class, owl:NamedIndividual, skos:Concept, vair:Concept ;
+    rdfs:isDefinedBy <https://w3id.org/vair#> ;
+    rdfs:subClassOf airo:RiskSource ;
+    skos:definition ""@en ;
+    skos:inScheme <https://w3id.org/vair#> ;
+    skos:prefLabel "Attack"@en .
+
+vair:AuthorisedRepresentative
+    a owl:Class, owl:NamedIndividual, skos:Concept, vair:Concept ;
+    rdfs:isDefinedBy <https://w3id.org/vair#> ;
+    rdfs:subClassOf airo:AIOperator ;
+    skos:definition "means any natural or legal person physically present or established in the Union who has received and accepted a written mandate from a provider of an AI system to, respectively, perform and carry out on its behalf the obligations and procedures established by the AI Act."@en ;
+    skos:inScheme <https://w3id.org/vair#> ;
+    skos:prefLabel "Authorised Representative"@en .
+
+vair:Authority
+    a owl:Class, owl:NamedIndividual, skos:Concept, vair:Concept ;
+    rdfs:isDefinedBy <https://w3id.org/vair#> ;
+    skos:definition ""@en ;
+    skos:inScheme <https://w3id.org/vair#> ;
+    skos:prefLabel "Authority"@en .
+
+vair:AutomaticSummarisation
+    a owl:Class, owl:NamedIndividual, skos:Concept, vair:Concept ;
+    rdfs:isDefinedBy <https://w3id.org/vair#> ;
+    rdfs:subClassOf airo:Capability ;
+    skos:definition "shortening a portion of natural language content or text while retaining important semantic information. [ISO/IEC 22989, 3.6.1]"@en ;
+    skos:inScheme <https://w3id.org/vair#> ;
+    skos:prefLabel "Automatic Summarisation"@en .
+
+vair:AutonomousSystem
+    a owl:Class, owl:NamedIndividual, skos:Concept, vair:Concept ;
+    rdfs:isDefinedBy <https://w3id.org/vair#> ;
+    rdfs:subClassOf airo:AISystem ;
+    skos:definition ""@en ;
+    skos:inScheme <https://w3id.org/vair#> ;
+    skos:prefLabel "Autonomous System"@en .
+
+vair:BayesianEstimation
+    a owl:Class, owl:NamedIndividual, skos:Concept, vair:Concept ;
+    rdfs:isDefinedBy <https://w3id.org/vair#> ;
+    rdfs:subClassOf vair:StatisticalTechnique ;
+    skos:definition ""@en ;
+    skos:inScheme <https://w3id.org/vair#> ;
+    skos:prefLabel "Bayesian Estimation"@en .
+
+vair:BayesianNetwork
+    a owl:Class, owl:NamedIndividual, skos:Concept, vair:Concept ;
+    rdfs:isDefinedBy <https://w3id.org/vair#> ;
+    rdfs:subClassOf vair:Model ;
+    skos:definition "probabilistic model  that uses Bayesian inference  for probability computations using a directed acyclic graph. [ISO/IEC 22989 3.3.1]"@en ;
+    skos:inScheme <https://w3id.org/vair#> ;
+    skos:prefLabel "Bayesian Network"@en ;
+    skos:related vair:MachineLearningTechnique .
+
+vair:BayesianOptimisation
+    a owl:Class, owl:NamedIndividual, skos:Concept, vair:Concept ;
+    rdfs:isDefinedBy <https://w3id.org/vair#> ;
+    rdfs:subClassOf vair:StatisticalTechnique ;
+    skos:definition ""@en ;
+    skos:inScheme <https://w3id.org/vair#> ;
+    skos:prefLabel "Bayesian Optimisation"@en .
+
+vair:BehaviourAnalysis
+    a owl:Class, owl:NamedIndividual, skos:Concept, vair:Concept ;
+    rdfs:isDefinedBy <https://w3id.org/vair#> ;
+    rdfs:subClassOf airo:Capability ;
+    skos:definition ""@en ;
+    skos:inScheme <https://w3id.org/vair#> ;
+    skos:prefLabel "Behaviour Analysis"@en .
+
+vair:Bias
+    a owl:Class, owl:NamedIndividual, skos:Concept, vair:Concept ;
+    rdfs:isDefinedBy <https://w3id.org/vair#> ;
+    rdfs:subClassOf airo:Consequence ;
+    skos:definition "systematic difference in treatment of certain objects, people or groups in comparison to others"@en ;
+    skos:inScheme <https://w3id.org/vair#> ;
+    skos:prefLabel "Bias"@en .
+
+vair:BiasDetection
+    a owl:Class, owl:NamedIndividual, skos:Concept, vair:Concept ;
+    rdfs:isDefinedBy <https://w3id.org/vair#> ;
+    rdfs:subClassOf airo:DetectionControl ;
+    skos:definition "Control that is applied to detect bias in datasets, models, algorithms, etc."@en ;
+    skos:inScheme <https://w3id.org/vair#> ;
+    skos:prefLabel "Bias Detection"@en .
+
+vair:BiasedTestData
+    a owl:Class, owl:NamedIndividual, skos:Concept, vair:Concept ;
+    rdfs:isDefinedBy <https://w3id.org/vair#> ;
+    rdfs:subClassOf airo:TestDataRiskSource ;
+    skos:definition ""@en ;
+    skos:inScheme <https://w3id.org/vair#> ;
+    skos:prefLabel "Biased Test Data"@en ;
+    skos:related vair:TestData .
+
+vair:BiasedTrainingData
+    a owl:Class, owl:NamedIndividual, skos:Concept, vair:Concept ;
+    rdfs:isDefinedBy <https://w3id.org/vair#> ;
+    rdfs:subClassOf airo:TrainingDataRiskSource ;
+    skos:definition ""@en ;
+    skos:inScheme <https://w3id.org/vair#> ;
+    skos:prefLabel "Biased Training Data"@en ;
+    skos:related vair:TrainingData .
+
+vair:BiasedValidationData
+    a owl:Class, owl:NamedIndividual, skos:Concept, vair:Concept ;
+    rdfs:isDefinedBy <https://w3id.org/vair#> ;
+    rdfs:subClassOf airo:ValidationDataRiskSource ;
+    skos:definition ""@en ;
+    skos:inScheme <https://w3id.org/vair#> ;
+    skos:prefLabel "Biased Validation Data"@en ;
+    skos:related vair:ValidationData .
+
+vair:BiometricIdentification
+    a owl:Class, owl:NamedIndividual, skos:Concept, vair:Concept ;
+    rdfs:isDefinedBy <https://w3id.org/vair#> ;
+    rdfs:subClassOf airo:Capability ;
+    skos:definition ""@en ;
+    skos:inScheme <https://w3id.org/vair#> ;
+    skos:prefLabel "Biometric Identification"@en .
+
+vair:BorderControl
+    a owl:Class, owl:NamedIndividual, skos:Concept, vair:Concept ;
+    rdfs:isDefinedBy <https://w3id.org/vair#> ;
+    rdfs:subClassOf airo:Domain ;
+    skos:definition ""@en ;
+    skos:inScheme <https://w3id.org/vair#> ;
+    skos:prefLabel "Border Control"@en .
+
+vair:BorderControlSecurityCheck
+    a owl:Class, owl:NamedIndividual, skos:Concept, vair:Concept ;
+    rdfs:isDefinedBy <https://w3id.org/vair#> ;
+    rdfs:subClassOf airo:Purpose ;
+    skos:definition ""@en ;
+    skos:inScheme <https://w3id.org/vair#> ;
+    skos:prefLabel "Border Control Security Check"@en ;
+    skos:related vair:BorderControl .
+
+vair:CaseBasedReasoning
+    a owl:Class, owl:NamedIndividual, skos:Concept, vair:Concept ;
+    rdfs:isDefinedBy <https://w3id.org/vair#> ;
+    rdfs:subClassOf vair:ReasoningTechnique ;
+    skos:definition ""@en ;
+    skos:inScheme <https://w3id.org/vair#> ;
+    skos:prefLabel "Case Based Reasoning"@en .
+
+vair:CognitiveComputing
+    a owl:Class, owl:NamedIndividual, skos:Concept, vair:Concept ;
+    rdfs:isDefinedBy <https://w3id.org/vair#> ;
+    rdfs:subClassOf airo:AISystem ;
+    skos:definition "category of AI systems that enables people and machines to interact more naturally [ISO/IEC 22989, 3.1.8]"@en ;
+    skos:inScheme <https://w3id.org/vair#> ;
+    skos:prefLabel "Cognitive Computing"@en .
+
+vair:CognitiveSystem
+    a owl:Class, owl:NamedIndividual, skos:Concept, vair:Concept ;
+    rdfs:isDefinedBy <https://w3id.org/vair#> ;
+    rdfs:subClassOf airo:AISystem ;
+    skos:definition ""@en ;
+    skos:inScheme <https://w3id.org/vair#> ;
+    skos:prefLabel "Cognitive System"@en .
+
+vair:CommonSenseReasoning
+    a owl:Class, owl:NamedIndividual, skos:Concept, vair:Concept ;
+    rdfs:isDefinedBy <https://w3id.org/vair#> ;
+    rdfs:subClassOf vair:ReasoningTechnique ;
+    skos:definition ""@en ;
+    skos:inScheme <https://w3id.org/vair#> ;
+    skos:prefLabel "Common Sense Reasoning"@en .
+
+vair:CompetentPublicAuthority
+    a owl:Class, owl:NamedIndividual, skos:Concept, vair:Concept ;
+    rdfs:isDefinedBy <https://w3id.org/vair#> ;
+    rdfs:subClassOf airo:AIUser ;
+    skos:definition "competent public authorities"@en ;
+    skos:inScheme <https://w3id.org/vair#> ;
+    skos:prefLabel "Competent Public Authority "@en .
+
+vair:CompetentPublicAuthorityRepresentative
+    a owl:Class, owl:NamedIndividual, skos:Concept, vair:Concept ;
+    rdfs:isDefinedBy <https://w3id.org/vair#> ;
+    rdfs:subClassOf airo:AIUser ;
+    skos:definition "an entity that acts on behalf of competent public authorities"@en ;
+    skos:inScheme <https://w3id.org/vair#> ;
+    skos:prefLabel "Competent Public Authority Representative"@en .
+
+vair:ComputerVision
+    a owl:Class, owl:NamedIndividual, skos:Concept, vair:Concept ;
+    rdfs:isDefinedBy <https://w3id.org/vair#> ;
+    rdfs:subClassOf airo:Capability ;
+    skos:definition "capability of a functional unit to acquire, process and interpret data representing images or video. [ISO/IEC 22989, 3.7.1]"@en ;
+    skos:inScheme <https://w3id.org/vair#> ;
+    skos:prefLabel "Computer Vision"@en .
+
+vair:Concept
+    a owl:Class .
+
+vair:ConformityAssessmentBody
+    a owl:Class, owl:NamedIndividual, skos:Concept, vair:Concept ;
+    rdfs:isDefinedBy <https://w3id.org/vair#> ;
+    rdfs:subClassOf airo:Stakeholder ;
+    skos:definition "a body that performs third-party conformity assessment activities, including testing, certification and inspection"@en ;
+    skos:inScheme <https://w3id.org/vair#> ;
+    skos:prefLabel "Conformity Assessment Body"@en .
+
+vair:Content
+    a owl:Class, owl:NamedIndividual, skos:Concept, vair:Concept ;
+    rdfs:isDefinedBy <https://w3id.org/vair#> ;
+    rdfs:subClassOf airo:Output ;
+    skos:definition "Content generated using an AI system."@en ;
+    skos:inScheme <https://w3id.org/vair#> ;
+    skos:prefLabel "Content"@en .
+
+vair:ContentGeneration
+    a owl:Class, owl:NamedIndividual, skos:Concept, vair:Concept ;
+    rdfs:isDefinedBy <https://w3id.org/vair#> ;
+    rdfs:subClassOf airo:Purpose ;
+    skos:definition "Generation or manipulation of audio content"@en ;
+    skos:inScheme <https://w3id.org/vair#> ;
+    skos:prefLabel "Content Generation"@en .
+
+vair:ContinuousValidation
+    a owl:Class, owl:NamedIndividual, skos:Concept, vair:Concept ;
+    rdfs:isDefinedBy <https://w3id.org/vair#> ;
+    rdfs:subClassOf airo:AILifecyclePhase ;
+    skos:definition ""@en ;
+    skos:inScheme <https://w3id.org/vair#> ;
+    skos:prefLabel "Continuous Validation"@en .
+
+vair:ConvolutionalNeuralNetwork
+    a owl:Class, owl:NamedIndividual, skos:Concept, vair:Concept ;
+    rdfs:isDefinedBy <https://w3id.org/vair#> ;
+    rdfs:subClassOf vair:FeedForwardNeuralNetwork ;
+    skos:definition "feed forward neural network using convolution  in at least one of its layers. [ISO/IEC 22989 3.4.2]"@en ;
+    skos:inScheme <https://w3id.org/vair#> ;
+    skos:prefLabel "Convolutional Neural Network"@en .
+
+vair:CourseApplicant
+    a owl:Class, owl:NamedIndividual, skos:Concept, vair:Concept ;
+    rdfs:isDefinedBy <https://w3id.org/vair#> ;
+    rdfs:subClassOf airo:AISubject ;
+    skos:definition ""@en ;
+    skos:inScheme <https://w3id.org/vair#> ;
+    skos:prefLabel "Course Applicant"@en .
+
+vair:CourseAttendee
+    rdfs:isDefinedBy <https://w3id.org/vair#> ;
+    skos:definition ""@en ;
+    skos:inScheme <https://w3id.org/vair#> ;
+    skos:prefLabel "Course Attendee"@en .
+
+vair:CriticalInfrastructure
+    a owl:Class, owl:NamedIndividual, skos:Concept, vair:Concept ;
+    rdfs:isDefinedBy <https://w3id.org/vair#> ;
+    rdfs:subClassOf airo:Domain ;
+    skos:definition ""@en ;
+    skos:inScheme <https://w3id.org/vair#> ;
+    skos:prefLabel "Critical Infrastructure"@en .
+
+vair:Cyberattack
+    a owl:Class, owl:NamedIndividual, skos:Concept, vair:Concept ;
+    rdfs:isDefinedBy <https://w3id.org/vair#> ;
+    rdfs:subClassOf vair:Attack ;
+    skos:definition ""@en ;
+    skos:inScheme <https://w3id.org/vair#> ;
+    skos:prefLabel "Cyberattack"@en .
+
+vair:Data
+    a owl:NamedIndividual, skos:Concept, vair:Concept ;
+    rdfs:isDefinedBy <https://w3id.org/vair#> ;
+    skos:definition ""@en ;
+    skos:inScheme <https://w3id.org/vair#> ;
+    skos:prefLabel "Data"@en .
+
+vair:DataPoisoning
+    a owl:Class, owl:NamedIndividual, skos:Concept, vair:Concept ;
+    rdfs:isDefinedBy <https://w3id.org/vair#> ;
+    rdfs:subClassOf vair:Attack ;
+    skos:definition "Attack trying to manipulate the training dataset."@en ;
+    skos:inScheme <https://w3id.org/vair#> ;
+    skos:prefLabel "Data Poisoning"@en ;
+    skos:related vair:TrainingData .
+
+vair:Dataset
+    a owl:Class, owl:NamedIndividual, skos:Concept, vair:Concept ;
+    rdfs:isDefinedBy <https://w3id.org/vair#> ;
+    rdfs:subClassOf airo:AIComponent ;
+    skos:definition "Collection of data with a shared format. [ISO/IEC 22989, 3.2.5]"@en ;
+    skos:inScheme <https://w3id.org/vair#> ;
+    skos:prefLabel "Dataset"@en .
+
+vair:Death
+    a owl:Class, owl:NamedIndividual, skos:Concept, vair:Concept ;
+    rdfs:isDefinedBy <https://w3id.org/vair#> ;
+    rdfs:subClassOf airo:WellbeingImpact ;
+    skos:definition ""@en ;
+    skos:inScheme <https://w3id.org/vair#> ;
+    skos:prefLabel "Death"@en .
+
+vair:Decision
+    a owl:Class, owl:NamedIndividual, skos:Concept, vair:Concept ;
+    rdfs:isDefinedBy <https://w3id.org/vair#> ;
+    rdfs:subClassOf airo:Output ;
+    skos:definition "Decision generated by an AI system"@en ;
+    skos:inScheme <https://w3id.org/vair#> ;
+    skos:prefLabel "Decision"@en .
+
+vair:DecisionMaking
+    a owl:Class, owl:NamedIndividual, skos:Concept, vair:Concept ;
+    rdfs:isDefinedBy <https://w3id.org/vair#> ;
+    rdfs:subClassOf airo:Purpose ;
+    skos:definition "Generation of decisions"@en ;
+    skos:inScheme <https://w3id.org/vair#> ;
+    skos:prefLabel "Decision Making"@en .
+
+vair:DecisionSupportSystem
+    a owl:Class, owl:NamedIndividual, skos:Concept, vair:Concept ;
+    rdfs:isDefinedBy <https://w3id.org/vair#> ;
+    rdfs:subClassOf airo:AISystem ;
+    skos:definition ""@en ;
+    skos:inScheme <https://w3id.org/vair#> ;
+    skos:prefLabel "Decision Support System"@en .
+
+vair:DecisionTree
+    a owl:Class, owl:NamedIndividual, skos:Concept, vair:Concept ;
+    rdfs:isDefinedBy <https://w3id.org/vair#> ;
+    rdfs:subClassOf vair:Model ;
+    skos:definition "model for which inference  is encoded as paths from the root to a leaf node in a tree structure. [ISO/IEC 22989 3.3.2]"@en ;
+    skos:inScheme <https://w3id.org/vair#> ;
+    skos:prefLabel "Decision Tree"@en ;
+    skos:related vair:MachineLearningTechnique .
+
+vair:DecreasedRobustness
+    a owl:Class, owl:NamedIndividual, skos:Concept, vair:Concept ;
+    rdfs:isDefinedBy <https://w3id.org/vair#> ;
+    rdfs:subClassOf airo:Consequence ;
+    skos:definition "Decreased level of system's robustness resulted from materialisation of a risk."@en ;
+    skos:inScheme <https://w3id.org/vair#> ;
+    skos:prefLabel "Decreased Robustness"@en .
+
+vair:DecreasedSecurity
+    a owl:Class, owl:NamedIndividual, skos:Concept, vair:Concept ;
+    rdfs:isDefinedBy <https://w3id.org/vair#> ;
+    rdfs:subClassOf airo:Consequence ;
+    skos:definition "Decreased level of security of system resulted from materialisation of a risk."@en ;
+    skos:inScheme <https://w3id.org/vair#> ;
+    skos:prefLabel "Decreased Security"@en .
+
+vair:DectectingCriminalOffences
+    a owl:Class ;
+    rdfs:subClassOf airo:Purpose .
+
+vair:DeepFakeDetection
+    a owl:Class, owl:NamedIndividual, skos:Concept, vair:Concept ;
+    rdfs:isDefinedBy <https://w3id.org/vair#> ;
+    rdfs:subClassOf vair:Detection ;
+    skos:definition "Dectection of content that is generated using deep fake"@en ;
+    skos:inScheme <https://w3id.org/vair#> ;
+    skos:prefLabel "Deep Fake Detection"@en .
+
+vair:DegradedAccuracy
+    a owl:Class, owl:NamedIndividual, skos:Concept, vair:Concept ;
+    rdfs:isDefinedBy <https://w3id.org/vair#> ;
+    rdfs:subClassOf airo:Consequence ;
+    skos:definition "Decreased level of system's accuracy resulted from materialisation of a risk."@en ;
+    skos:inScheme <https://w3id.org/vair#> ;
+    skos:prefLabel "Degraded Accuracy"@en .
+
+vair:Deployment
+    a owl:Class, owl:NamedIndividual, skos:Concept, vair:Concept ;
+    rdfs:isDefinedBy <https://w3id.org/vair#> ;
+    rdfs:subClassOf airo:AILifecyclePhase ;
+    skos:definition ""@en ;
+    skos:inScheme <https://w3id.org/vair#> ;
+    skos:prefLabel "Deployment"@en .
+
+vair:Design
+    a owl:Class, owl:NamedIndividual, skos:Concept, vair:Concept ;
+    rdfs:isDefinedBy <https://w3id.org/vair#> ;
+    rdfs:subClassOf airo:AILifecyclePhase ;
+    skos:definition ""@en ;
+    skos:inScheme <https://w3id.org/vair#> ;
+    skos:prefLabel "Design"@en .
+
+vair:DetectingCriminalOffences
+    a owl:Class, owl:NamedIndividual, skos:Concept, vair:Concept ;
+    rdfs:isDefinedBy <https://w3id.org/vair#> ;
+    rdfs:subClassOf airo:Purpose ;
+    skos:definition ""@en ;
+    skos:inScheme <https://w3id.org/vair#> ;
+    skos:prefLabel "Detecting Criminal Offences"@en ;
+    skos:related vair:LawEnforcement .
+
+vair:DetectingEmotionalState
+    a owl:Class, owl:NamedIndividual, skos:Concept, vair:Concept ;
+    rdfs:isDefinedBy <https://w3id.org/vair#> ;
+    rdfs:subClassOf vair:Detection ;
+    skos:definition "Detection of the emotional state of a natural person"@en ;
+    skos:inScheme <https://w3id.org/vair#> ;
+    skos:prefLabel "Detecting Emotional State"@en .
+
+vair:DetectingNon-AuthenticDocument
+    a owl:Class, owl:NamedIndividual, skos:Concept, vair:Concept ;
+    rdfs:isDefinedBy <https://w3id.org/vair#> ;
+    rdfs:subClassOf vair:Detection ;
+    skos:definition ""@en ;
+    skos:inScheme <https://w3id.org/vair#> ;
+    skos:prefLabel "Detecting Non-Authentic Document"@en .
+
+vair:Detection
+    a owl:Class, owl:NamedIndividual, skos:Concept, vair:Concept ;
+    rdfs:isDefinedBy <https://w3id.org/vair#> ;
+    rdfs:subClassOf vair:DecisionMaking ;
+    skos:definition ""@en ;
+    skos:inScheme <https://w3id.org/vair#> ;
+    skos:prefLabel "Detection"@en .
+
+vair:DeterminingAccessToEducation
+    a owl:Class, owl:NamedIndividual, skos:Concept, vair:Concept ;
+    rdfs:isDefinedBy <https://w3id.org/vair#> ;
+    rdfs:subClassOf airo:Purpose, vair:Assessment ;
+    skos:definition "Determining access to educational and vocational training institutions or programmes at all levels."@en ;
+    skos:inScheme <https://w3id.org/vair#> ;
+    skos:prefLabel "Determining Access To Education"@en ;
+    skos:related vair:Education .
+
+vair:DeterminingAdmissionToEducationalInstitutions
+    a owl:Class, owl:NamedIndividual, skos:Concept, vair:Concept ;
+    rdfs:isDefinedBy <https://w3id.org/vair#> ;
+    rdfs:subClassOf airo:Purpose, vair:Assessment ;
+    skos:definition "Determining admission to educational and vocational training institutions or programmes at all levels."@en ;
+    skos:inScheme <https://w3id.org/vair#> ;
+    skos:prefLabel "Determining Admission To Educationa Institutions"@en ;
+    skos:related vair:Education .
+
+vair:DeterminingCreditScore
+    a owl:Class, owl:NamedIndividual, skos:Concept, vair:Concept ;
+    rdfs:isDefinedBy <https://w3id.org/vair#> ;
+    rdfs:subClassOf airo:Purpose, vair:Assessment ;
+    skos:definition ""@en ;
+    skos:inScheme <https://w3id.org/vair#> ;
+    skos:prefLabel "Determining Credit Score"@en ;
+    skos:related vair:Finance .
+
+vair:Development
+    a owl:Class, owl:NamedIndividual, skos:Concept, vair:Concept ;
+    rdfs:isDefinedBy <https://w3id.org/vair#> ;
+    rdfs:subClassOf airo:AILifecyclePhase ;
+    skos:definition ""@en ;
+    skos:inScheme <https://w3id.org/vair#> ;
+    skos:prefLabel "Development"@en .
+
+vair:DevelopmentData
+    a owl:NamedIndividual, skos:Concept, vair:Concept ;
+    rdfs:isDefinedBy <https://w3id.org/vair#> ;
+    skos:definition ""@en ;
+    skos:inScheme <https://w3id.org/vair#> ;
+    skos:prefLabel "Development Data"@en ;
+    skos:related vair:ValidationData .
+
+vair:DialogueManagement
+    a owl:Class, owl:NamedIndividual, skos:Concept, vair:Concept ;
+    rdfs:isDefinedBy <https://w3id.org/vair#> ;
+    rdfs:subClassOf airo:Capability ;
+    skos:definition "choosing the appropriate next move in a dialogue based on user input, the dialogue history and other contextual knowledge to meet a desired goal. [ISO/IEC 22989, 3.6.2]"@en ;
+    skos:inScheme <https://w3id.org/vair#> ;
+    skos:prefLabel "Dialogue Management"@en .
+
+vair:DiscoveringCrimePatterns
+    a owl:Class, owl:NamedIndividual, skos:Concept, vair:Concept ;
+    rdfs:isDefinedBy <https://w3id.org/vair#> ;
+    rdfs:subClassOf vair:Detection ;
+    skos:definition "Identifying unkown patterns of crime"@en ;
+    skos:inScheme <https://w3id.org/vair#> ;
+    skos:prefLabel "Discovering Crime Patterns"@en ;
+    skos:related vair:LawEnforcemnet .
+
+vair:DiscoveringCrimeRelationships
+    a owl:Class, owl:NamedIndividual, skos:Concept, vair:Concept ;
+    rdfs:isDefinedBy <https://w3id.org/vair#> ;
+    rdfs:subClassOf vair:Detection ;
+    skos:definition "Discovering hidden relationships related to crime"@en ;
+    skos:inScheme <https://w3id.org/vair#> ;
+    skos:prefLabel "Discovering Crime Relationships"@en ;
+    skos:related vair:LawEnforcemnet .
+
+vair:DispatchingEmergencyService
+    a owl:Class, owl:NamedIndividual, skos:Concept, vair:Concept ;
+    rdfs:isDefinedBy <https://w3id.org/vair#> ;
+    rdfs:subClassOf airo:Purpose, vair:Planning ;
+    skos:definition "Dispatching  of emergency first response services, including by firefighters and medical aid"@en ;
+    skos:inScheme <https://w3id.org/vair#> ;
+    skos:prefLabel "Dispatching  Emergency Service"@en ;
+    skos:related vair:PublicService .
+
+vair:DistortionInHumanBehaviour
+    a owl:Class, owl:NamedIndividual, skos:Concept, vair:Concept ;
+    rdfs:isDefinedBy <https://w3id.org/vair#> ;
+    rdfs:subClassOf airo:WellbeingImpact ;
+    skos:definition ""@en ;
+    skos:inScheme <https://w3id.org/vair#> ;
+    skos:prefLabel "Distortion In Human Behaviour"@en .
+
+vair:Distributor
+    a owl:NamedIndividual, skos:Concept, vair:Concept ;
+    rdfs:isDefinedBy <https://w3id.org/vair#> ;
+    skos:definition """any natural or legal person in the supply chain, other than the provider
+or the importer, that makes an AI system available on the Union market"""@en ;
+    skos:inScheme <https://w3id.org/vair#> ;
+    skos:prefLabel "Distributor"@en .
+
+vair:Education
+    a owl:Class, owl:NamedIndividual, skos:Concept, vair:Concept ;
+    rdfs:isDefinedBy <https://w3id.org/vair#> ;
+    rdfs:subClassOf airo:Domain ;
+    skos:definition ""@en ;
+    skos:inScheme <https://w3id.org/vair#> ;
+    skos:prefLabel "Education"@en .
+
+vair:EmergencyService
+    a owl:Class, owl:NamedIndividual, skos:Concept, vair:Concept ;
+    rdfs:isDefinedBy <https://w3id.org/vair#> ;
+    rdfs:subClassOf airo:AIUser ;
+    skos:definition ""@en ;
+    skos:inScheme <https://w3id.org/vair#> ;
+    skos:prefLabel "Emergency Service"@en .
+
+vair:EmotionRecognition
+    a owl:Class, owl:NamedIndividual, skos:Concept, vair:Concept ;
+    rdfs:isDefinedBy <https://w3id.org/vair#> ;
+    rdfs:subClassOf airo:Capability ;
+    skos:definition "computationally identifying and categorizing emotions expressed in a piece of text, speech, video or image or combination thereof. [ISO/IEC 22989, 3.6.3]"@en ;
+    skos:inScheme <https://w3id.org/vair#> ;
+    skos:prefLabel "Emotion Recognition"@en .
+
+vair:Employee
+    a owl:Class, owl:NamedIndividual, skos:Concept, vair:Concept ;
+    rdfs:isDefinedBy <https://w3id.org/vair#> ;
+    rdfs:subClassOf airo:AISubject ;
+    skos:definition "A person in work-related contractual relationships"@en ;
+    skos:inScheme <https://w3id.org/vair#> ;
+    skos:prefLabel "Employee"@en .
+
+vair:Employment
+    a owl:Class, owl:NamedIndividual, skos:Concept, vair:Concept ;
+    rdfs:isDefinedBy <https://w3id.org/vair#> ;
+    rdfs:subClassOf airo:Domain ;
+    skos:definition ""@en ;
+    skos:inScheme <https://w3id.org/vair#> ;
+    skos:prefLabel "Employment"@en .
+
+vair:ErroneousInputData
+    a owl:Class, owl:NamedIndividual, skos:Concept, vair:Concept ;
+    rdfs:isDefinedBy <https://w3id.org/vair#> ;
+    rdfs:subClassOf airo:InputDataRiskSource ;
+    skos:definition ""@en ;
+    skos:inScheme <https://w3id.org/vair#> ;
+    skos:prefLabel "Erroneous Input Data"@en ;
+    skos:related vair:InputData .
+
+vair:ErroneousTestData
+    a owl:Class, owl:NamedIndividual, skos:Concept, vair:Concept ;
+    rdfs:isDefinedBy <https://w3id.org/vair#> ;
+    rdfs:subClassOf airo:TestDataRiskSource ;
+    skos:definition "Error in testing data"@en ;
+    skos:inScheme <https://w3id.org/vair#> ;
+    skos:prefLabel "Erroneous Test Data"@en ;
+    skos:related vair:TestData .
+
+vair:ErroneousTrainingData
+    a owl:Class, owl:NamedIndividual, skos:Concept, vair:Concept ;
+    rdfs:isDefinedBy <https://w3id.org/vair#> ;
+    rdfs:subClassOf airo:TrainingDataRiskSource ;
+    skos:definition "Error in training data"@en ;
+    skos:inScheme <https://w3id.org/vair#> ;
+    skos:prefLabel "Erroneous Training Data"@en ;
+    skos:related vair:TrainingData .
+
+vair:ErroneousValidationData
+    a owl:Class, owl:NamedIndividual, skos:Concept, vair:Concept ;
+    rdfs:isDefinedBy <https://w3id.org/vair#> ;
+    rdfs:subClassOf airo:ValidationDataRiskSource ;
+    skos:definition "Error in validation data"@en ;
+    skos:inScheme <https://w3id.org/vair#> ;
+    skos:prefLabel "Erroneous Validation Data"@en ;
+    skos:related vair:ValidationData .
+
+vair:ErrorInDataCollection
+    a owl:Class, owl:NamedIndividual, skos:Concept, vair:Concept ;
+    rdfs:isDefinedBy <https://w3id.org/vair#> ;
+    rdfs:subClassOf airo:DataRiskSource ;
+    skos:definition ""@en ;
+    skos:inScheme <https://w3id.org/vair#> ;
+    skos:prefLabel "Error In Data Collection"@en ;
+    skos:related vair:DataCollection .
+
+vair:ErrorInDataPrepration
+    a owl:Class, owl:NamedIndividual, skos:Concept, vair:Concept ;
+    rdfs:isDefinedBy <https://w3id.org/vair#> ;
+    rdfs:subClassOf airo:DataRiskSource ;
+    skos:definition ""@en ;
+    skos:inScheme <https://w3id.org/vair#> ;
+    skos:prefLabel "Error In Data Prepration"@en ;
+    skos:related vair:DataPrepration .
+
+vair:EuropeanArtificialIntelligenceBoard
+    a owl:Class, owl:NamedIndividual, skos:Concept, vair:Concept ;
+    rdfs:isDefinedBy <https://w3id.org/vair#> ;
+    rdfs:subClassOf vair:Authority ;
+    skos:definition ""@en ;
+    skos:inScheme <https://w3id.org/vair#> ;
+    skos:prefLabel "European Artificial Intelligence Board"@en .
+
+vair:EuropeanDataProtectionSupervisor
+    a owl:Class, owl:NamedIndividual, skos:Concept, vair:Concept ;
+    rdfs:isDefinedBy <https://w3id.org/vair#> ;
+    rdfs:subClassOf vair:Authority ;
+    skos:definition "The European Data Protection Supervisor (EDPS) is the European Union’s (EU) independent data protection authority"@en ;
+    skos:inScheme <https://w3id.org/vair#> ;
+    skos:prefLabel "European Data Protection Supervisor"@en .
+
+vair:EvaluatingEligibilityToAccessPublicAssistanceServices
+    a owl:Class, owl:NamedIndividual, skos:Concept, vair:Concept ;
+    rdfs:isDefinedBy <https://w3id.org/vair#> ;
+    rdfs:subClassOf airo:Purpose, vair:Assessment ;
+    skos:definition ""@en ;
+    skos:inScheme <https://w3id.org/vair#> ;
+    skos:prefLabel "Evaluating Eligibility To Access Public Assistance Services"@en ;
+    skos:related vair:PublicService .
+
+vair:EvaluatingEmployee
+    a owl:Class, owl:NamedIndividual, skos:Concept, vair:Concept ;
+    rdfs:isDefinedBy <https://w3id.org/vair#> ;
+    rdfs:subClassOf vair:Assessment ;
+    skos:definition ""@en ;
+    skos:inScheme <https://w3id.org/vair#> ;
+    skos:prefLabel "Evaluating Employee"@en ;
+    skos:related vair:Employment .
+
+vair:EvaluatingEmployeeBehaviour
+    a owl:Class, owl:NamedIndividual, skos:Concept, vair:Concept ;
+    rdfs:isDefinedBy <https://w3id.org/vair#> ;
+    rdfs:subClassOf airo:Purpose, vair:Assessment ;
+    skos:definition ""@en ;
+    skos:inScheme <https://w3id.org/vair#> ;
+    skos:prefLabel "Evaluating Employee Behaviour"@en ;
+    skos:related vair:Employment .
+
+vair:EvaluatingEmployeePerformance
+    a owl:Class, owl:NamedIndividual, skos:Concept, vair:Concept ;
+    rdfs:isDefinedBy <https://w3id.org/vair#> ;
+    rdfs:subClassOf airo:Purpose, vair:Assessment ;
+    skos:definition ""@en ;
+    skos:inScheme <https://w3id.org/vair#> ;
+    skos:prefLabel "Evaluating Employee Performance"@en ;
+    skos:related vair:Employment .
+
+vair:EvaluatingInterview
+    a owl:Class, owl:NamedIndividual, skos:Concept, vair:Concept ;
+    rdfs:isDefinedBy <https://w3id.org/vair#> ;
+    rdfs:subClassOf vair:Assessment ;
+    skos:definition ""@en ;
+    skos:inScheme <https://w3id.org/vair#> ;
+    skos:prefLabel "Evaluating Interview"@en ;
+    skos:related vair:Employment .
+
+vair:EvaluatingJobCandidates
+    a owl:Class, owl:NamedIndividual, skos:Concept, vair:Concept ;
+    rdfs:isDefinedBy <https://w3id.org/vair#> ;
+    rdfs:subClassOf airo:Purpose, vair:Assessment ;
+    skos:definition ""@en ;
+    skos:inScheme <https://w3id.org/vair#> ;
+    skos:prefLabel "Evaluating Job Candidates"@en ;
+    skos:related vair:Employment .
+
+vair:EvaluatingLearningOutcomes
+    a owl:Class, owl:NamedIndividual, skos:Concept, vair:Concept ;
+    rdfs:isDefinedBy <https://w3id.org/vair#> ;
+    rdfs:subClassOf airo:Purpose, vair:Assessment ;
+    skos:definition "Evaluating learning outcomes, including when those outcomes are used to steer the learning process of natural persons in educational and vocational training institutions or programmes at all levels."@en ;
+    skos:inScheme <https://w3id.org/vair#> ;
+    skos:prefLabel "Evaluating Learning Outcomes"@en ;
+    skos:related vair:Education .
+
+vair:EvaluatingRecruitmentTest
+    a owl:Class, owl:NamedIndividual, skos:Concept, vair:Concept ;
+    rdfs:isDefinedBy <https://w3id.org/vair#> ;
+    rdfs:subClassOf vair:Assessment ;
+    skos:definition ""@en ;
+    skos:inScheme <https://w3id.org/vair#> ;
+    skos:prefLabel "Evaluating Recruitment Test"@en ;
+    skos:related vair:Employment .
+
+vair:EvaluatingReliabilityOfEvidence
+    a owl:Class, owl:NamedIndividual, skos:Concept, vair:Concept ;
+    rdfs:isDefinedBy <https://w3id.org/vair#> ;
+    rdfs:subClassOf airo:Purpose, vair:Assessment ;
+    skos:definition "Evaluation of the reliability of evidence in the course of investigation or prosecution of criminal offences"@en ;
+    skos:inScheme <https://w3id.org/vair#> ;
+    skos:prefLabel "Evaluating Reliability Of Evidence"@en ;
+    skos:related vair:LawEnforcement .
+
+vair:EvaluationData
+    a owl:NamedIndividual, skos:Concept, vair:Concept ;
+    rdfs:isDefinedBy <https://w3id.org/vair#> ;
+    skos:definition ""@en ;
+    skos:inScheme <https://w3id.org/vair#> ;
+    skos:prefLabel "Evaluation Data"@en ;
+    skos:related vair:TestData .
+
+vair:EvolutionaryAlgorithm
+    a owl:Class, owl:NamedIndividual, skos:Concept, vair:Concept ;
+    rdfs:isDefinedBy <https://w3id.org/vair#> ;
+    rdfs:subClassOf vair:Algorithm ;
+    skos:definition ""@en ;
+    skos:inScheme <https://w3id.org/vair#> ;
+    skos:prefLabel "Evolutionary Algorithm"@en .
+
+vair:ExaminingApplication
+    a owl:Class, owl:NamedIndividual, skos:Concept, vair:Concept ;
+    rdfs:isDefinedBy <https://w3id.org/vair#> ;
+    rdfs:subClassOf vair:DecisionMaking ;
+    skos:definition ""@en ;
+    skos:inScheme <https://w3id.org/vair#> ;
+    skos:prefLabel "Examining Application"@en .
+
+vair:ExaminingAsylumApplication
+    a owl:Class, owl:NamedIndividual, skos:Concept, vair:Concept ;
+    rdfs:isDefinedBy <https://w3id.org/vair#> ;
+    rdfs:subClassOf airo:Purpose, vair:ExaminingApplication ;
+    skos:definition ""@en ;
+    skos:inScheme <https://w3id.org/vair#> ;
+    skos:prefLabel "Examining Asylum Application"@en ;
+    skos:related vair:Migration .
+
+vair:ExaminingMigrationRelatedComplaints
+    a owl:Class, owl:NamedIndividual, skos:Concept, vair:Concept ;
+    rdfs:isDefinedBy <https://w3id.org/vair#> ;
+    rdfs:subClassOf airo:Purpose, vair:ExaminingApplication ;
+    skos:definition ""@en ;
+    skos:inScheme <https://w3id.org/vair#> ;
+    skos:prefLabel "Examining Migration Related Complaints"@en ;
+    skos:related vair:Migration .
+
+vair:ExaminingResidencePermitsApplication
+    a owl:Class, owl:NamedIndividual, skos:Concept, vair:Concept ;
+    rdfs:isDefinedBy <https://w3id.org/vair#> ;
+    rdfs:subClassOf airo:Purpose, vair:ExaminingApplication ;
+    skos:definition ""@en ;
+    skos:inScheme <https://w3id.org/vair#> ;
+    skos:prefLabel "Examining Residence Permits Application"@en ;
+    skos:related vair:Migration .
+
+vair:ExaminingVisaApplication
+    a owl:Class, owl:NamedIndividual, skos:Concept, vair:Concept ;
+    rdfs:isDefinedBy <https://w3id.org/vair#> ;
+    rdfs:subClassOf airo:Purpose, vair:ExaminingApplication ;
+    skos:definition ""@en ;
+    skos:inScheme <https://w3id.org/vair#> ;
+    skos:prefLabel "Examining Visa Application"@en ;
+    skos:related vair:Migration .
+
+vair:ExpertSystem
+    a owl:Class, owl:NamedIndividual, skos:Concept, vair:Concept ;
+    rdfs:isDefinedBy <https://w3id.org/vair#> ;
+    rdfs:subClassOf airo:AISystem ;
+    skos:definition "AI system that accumulates, combines and encapsulates knowledge provided by a human expert or experts in a specific domain to infer solutions to problems. [ISO/IEC 22989, 3.1.13]"@en ;
+    skos:inScheme <https://w3id.org/vair#> ;
+    skos:prefLabel "Expert System"@en ;
+    skos:related vair:ReasoningTechnique .
+
+vair:ExplainingAlgorithm
+    a owl:NamedIndividual, skos:Concept, vair:Concept ;
+    rdfs:isDefinedBy <https://w3id.org/vair#> ;
+    skos:definition "Providing an explaination of the algorithm used in the system."@en ;
+    skos:inScheme <https://w3id.org/vair#> ;
+    skos:prefLabel "Explaining Algorithm"@en ;
+    skos:related vair:Algorithm .
+
+vair:FaceRecognition
+    a owl:Class, owl:NamedIndividual, skos:Concept, vair:Concept ;
+    rdfs:isDefinedBy <https://w3id.org/vair#> ;
+    rdfs:subClassOf airo:Capability ;
+    skos:definition "automatic pattern recognition comparing stored images of human faces with the image of an actual face, indicating any matching, if it exists, and any data, if they exist, identifying the person to whom the face belongs. [ISO/IEC 22989, 3.7.2]"@en ;
+    skos:inScheme <https://w3id.org/vair#> ;
+    skos:prefLabel "Face Recognition"@en .
+
+vair:FeedForwardNeuralNetwork
+    a owl:Class, owl:NamedIndividual, skos:Concept, vair:Concept ;
+    rdfs:isDefinedBy <https://w3id.org/vair#> ;
+    rdfs:subClassOf vair:NeuralNetwork ;
+    skos:definition "neural network where information is fed from the input layer to the output layer in one direction only. [ISO/IEC 22989 3.4.6]"@en ;
+    skos:inScheme <https://w3id.org/vair#> ;
+    skos:prefLabel "Feed Forward Neural Network"@en .
+
+vair:FirstResponder
+    a owl:Class, owl:NamedIndividual, skos:Concept, vair:Concept ;
+    rdfs:isDefinedBy <https://w3id.org/vair#> ;
+    rdfs:subClassOf airo:AIUser ;
+    skos:definition ""@en ;
+    skos:inScheme <https://w3id.org/vair#> ;
+    skos:prefLabel "First Responder"@en .
+
+vair:Framework
+    a owl:Class .
+
+vair:Freedom
+    a owl:Class, owl:NamedIndividual, skos:Concept, vair:Concept ;
+    rdfs:isDefinedBy <https://w3id.org/vair#> ;
+    rdfs:subClassOf airo:ImpactedArea ;
+    skos:definition ""@en ;
+    skos:inScheme <https://w3id.org/vair#> ;
+    skos:prefLabel "Freedom"@en .
+
+vair:GeneralAI
+    a owl:Class, owl:NamedIndividual, skos:Concept, vair:Concept ;
+    rdfs:isDefinedBy <https://w3id.org/vair#> ;
+    rdfs:subClassOf airo:AISystem ;
+    skos:definition "Type of AI system that addresses a broad range of tasks with a satisfactory level of performance. [ISO/IEC 22989, 3.1.14]"@en ;
+    skos:inScheme <https://w3id.org/vair#> ;
+    skos:prefLabel "General AI"@en .
+
+vair:GeneratingAudioContent
+    a owl:Class, owl:NamedIndividual, skos:Concept, vair:Concept ;
+    rdfs:isDefinedBy <https://w3id.org/vair#> ;
+    rdfs:subClassOf vair:ContentGeneration ;
+    skos:definition "Generation or manipulation of audio content"@en ;
+    skos:inScheme <https://w3id.org/vair#> ;
+    skos:prefLabel "Generating Audio Content"@en .
+
+vair:GeneratingImageContent
+    a owl:Class, owl:NamedIndividual, skos:Concept, vair:Concept ;
+    rdfs:isDefinedBy <https://w3id.org/vair#> ;
+    rdfs:subClassOf vair:ContentGeneration ;
+    skos:definition "Generation or manipulation of image content"@en ;
+    skos:inScheme <https://w3id.org/vair#> ;
+    skos:prefLabel "Generating Image Content"@en .
+
+vair:GeneratingVideoContent
+    a owl:Class, owl:NamedIndividual, skos:Concept, vair:Concept ;
+    rdfs:isDefinedBy <https://w3id.org/vair#> ;
+    rdfs:subClassOf vair:ContentGeneration ;
+    skos:definition "Generation or manipulation of video content"@en ;
+    skos:inScheme <https://w3id.org/vair#> ;
+    skos:prefLabel "Generating Video Content"@en .
+
+vair:GeneticAlgorithm
+    a owl:Class, owl:NamedIndividual, skos:Concept, vair:Concept ;
+    rdfs:isDefinedBy <https://w3id.org/vair#> ;
+    rdfs:subClassOf vair:Algorithm ;
+    skos:definition "algorithm which simulates natural selection by creating and evolving a population of individuals (solutions) for optimization problems. [ISO/IEC 22989, 3.1.15]"@en ;
+    skos:inScheme <https://w3id.org/vair#> ;
+    skos:prefLabel "Genetic Algorithm"@en .
+
+vair:GestureRecognition
+    a owl:Class, owl:NamedIndividual, skos:Concept, vair:Concept ;
+    rdfs:isDefinedBy <https://w3id.org/vair#> ;
+    rdfs:subClassOf airo:Capability ;
+    skos:definition ""@en ;
+    skos:inScheme <https://w3id.org/vair#> ;
+    skos:prefLabel "Gesture Recognition"@en .
+
+vair:GrantingPublicAssistanceService
+    a owl:Class, owl:NamedIndividual, skos:Concept, vair:Concept ;
+    rdfs:isDefinedBy <https://w3id.org/vair#> ;
+    rdfs:subClassOf vair:DecisionMaking ;
+    skos:definition ""@en ;
+    skos:inScheme <https://w3id.org/vair#> ;
+    skos:prefLabel "Granting Public Assistance Service"@en ;
+    skos:related vair:PublicService .
+
+vair:GrantingPublicAssistanceServices
+    a owl:Class, owl:NamedIndividual, skos:Concept, vair:Concept ;
+    rdfs:isDefinedBy <https://w3id.org/vair#> ;
+    rdfs:subClassOf airo:Purpose ;
+    skos:definition ""@en ;
+    skos:inScheme <https://w3id.org/vair#> ;
+    skos:prefLabel "Granting Public Assistance Services"@en, "Granting Public AssistanceS ervices"@en ;
+    skos:related vair:PublicService .
+
+vair:Group
+    a owl:Class, owl:NamedIndividual, skos:Concept, vair:Concept ;
+    rdfs:isDefinedBy <https://w3id.org/vair#> ;
+    rdfs:subClassOf airo:AISubject ;
+    skos:definition "A group of persons such as citizens, marginsalised groups, etc."@en ;
+    skos:inScheme <https://w3id.org/vair#> ;
+    skos:prefLabel "Group"@en .
+
+vair:Hardware
+    a owl:Class, owl:NamedIndividual, skos:Concept, vair:Concept ;
+    rdfs:isDefinedBy <https://w3id.org/vair#> ;
+    rdfs:subClassOf airo:AIComponent ;
+    skos:definition ""@en ;
+    skos:inScheme <https://w3id.org/vair#> ;
+    skos:prefLabel "Hardware"@en .
+
+vair:Health
+    a owl:Class, owl:NamedIndividual, skos:Concept, vair:Concept ;
+    rdfs:isDefinedBy <https://w3id.org/vair#> ;
+    rdfs:subClassOf airo:ImpactedArea ;
+    skos:definition ""@en ;
+    skos:inScheme <https://w3id.org/vair#> ;
+    skos:prefLabel "Health"@en .
+
+vair:HealthInsurancePricing
+    a owl:Class, owl:NamedIndividual, skos:Concept, vair:Concept ;
+    rdfs:isDefinedBy <https://w3id.org/vair#> ;
+    rdfs:subClassOf airo:Purpose, vair:DecisionMaking ;
+    skos:definition ""@en ;
+    skos:inScheme <https://w3id.org/vair#> ;
+    skos:prefLabel "Health Insurance Pricing"@en ;
+    skos:related vair:PrivateService, vair:PublicService .
+
+vair:HealthInsuranceRiskAssessment
+    a owl:Class, owl:NamedIndividual, skos:Concept, vair:Concept ;
+    rdfs:isDefinedBy <https://w3id.org/vair#> ;
+    rdfs:subClassOf airo:Purpose, vair:Assessment ;
+    skos:definition ""@en ;
+    skos:inScheme <https://w3id.org/vair#> ;
+    skos:prefLabel "Health Insurance Risk Assessment"@en ;
+    skos:related vair:PrivateService, vair:PublicService .
+
+vair:HumanBehaviour
+    a owl:NamedIndividual, skos:Concept, vair:Concept ;
+    rdfs:isDefinedBy <https://w3id.org/vair#> ;
+    skos:definition "The way a person acts."@en ;
+    skos:inScheme <https://w3id.org/vair#> ;
+    skos:prefLabel "Human Behaviour"@en .
+
+vair:HumanOversightMeasure
+    a owl:Class, owl:NamedIndividual, skos:Concept, vair:Concept ;
+    rdfs:isDefinedBy <https://w3id.org/vair#> ;
+    rdfs:subClassOf airo:SemiAutomatedControl ;
+    skos:definition "Overseening the system by natural persons to detect, prevent or minimise risk."@en ;
+    skos:inScheme <https://w3id.org/vair#> ;
+    skos:prefLabel "Human Oversight Measure"@en .
+
+vair:Identifying
+    a owl:Class, owl:NamedIndividual, skos:Concept, vair:Concept ;
+    rdfs:isDefinedBy <https://w3id.org/vair#> ;
+    rdfs:subClassOf airo:Purpose ;
+    skos:definition ""@en ;
+    skos:inScheme <https://w3id.org/vair#> ;
+    skos:prefLabel "Identifying"@en .
+
+vair:ImageRecognition
+    a owl:Class, owl:NamedIndividual, skos:Concept, vair:Concept ;
+    rdfs:isDefinedBy <https://w3id.org/vair#> ;
+    rdfs:subClassOf airo:Capability ;
+    skos:definition "image classification process that classifies object(s), pattern(s) or concept(s) in an image  [ISO/IEC 22989, 3.7.4]"@en ;
+    skos:inScheme <https://w3id.org/vair#> ;
+    skos:prefLabel "Image Recognition"@en .
+
+vair:Importer
+    a owl:Class, owl:NamedIndividual, skos:Concept, vair:Concept ;
+    rdfs:isDefinedBy <https://w3id.org/vair#> ;
+    rdfs:subClassOf airo:AIOperator ;
+    skos:definition "any natural or legal person physically present or established in the Union that places on the market an AI system that bears the name or trademark of a natural or legal person established outside the Union."@en ;
+    skos:inScheme <https://w3id.org/vair#> ;
+    skos:prefLabel "Importer"@en .
+
+vair:InaccurateDecision
+    a owl:Class, owl:NamedIndividual, skos:Concept, vair:Concept ;
+    rdfs:isDefinedBy <https://w3id.org/vair#> ;
+    rdfs:subClassOf vair:LowAccuracy ;
+    skos:definition ""@en ;
+    skos:inScheme <https://w3id.org/vair#> ;
+    skos:prefLabel "Inaccurate Decision"@en .
+
+vair:InaccuratePrediction
+    a owl:Class, owl:NamedIndividual, skos:Concept, vair:Concept ;
+    rdfs:isDefinedBy <https://w3id.org/vair#> ;
+    rdfs:subClassOf vair:LowAccuracy ;
+    skos:definition ""@en ;
+    skos:inScheme <https://w3id.org/vair#> ;
+    skos:prefLabel "Inaccurate Prediction"@en .
+
+vair:InaccurateRecommendation
+    a owl:Class, owl:NamedIndividual, skos:Concept, vair:Concept ;
+    rdfs:isDefinedBy <https://w3id.org/vair#> ;
+    rdfs:subClassOf vair:LowAccuracy ;
+    skos:definition ""@en ;
+    skos:inScheme <https://w3id.org/vair#> ;
+    skos:prefLabel "Inaccurate Recommendation"@en .
+
+vair:Inception
+    a owl:Class, owl:NamedIndividual, skos:Concept, vair:Concept ;
+    rdfs:isDefinedBy <https://w3id.org/vair#> ;
+    rdfs:subClassOf airo:AILifecyclePhase ;
+    skos:definition ""@en ;
+    skos:inScheme <https://w3id.org/vair#> ;
+    skos:prefLabel "Inception"@en .
+
+vair:IncompleteTestData
+    a owl:Class, owl:NamedIndividual, skos:Concept, vair:Concept ;
+    rdfs:isDefinedBy <https://w3id.org/vair#> ;
+    rdfs:subClassOf airo:TestDataRiskSource ;
+    skos:definition "Incompleteness of testing data set"@en ;
+    skos:inScheme <https://w3id.org/vair#> ;
+    skos:prefLabel "Incomplete Test Data"@en ;
+    skos:related vair:TestData .
+
+vair:IncompleteTrainingData
+    a owl:Class, owl:NamedIndividual, skos:Concept, vair:Concept ;
+    rdfs:isDefinedBy <https://w3id.org/vair#> ;
+    rdfs:subClassOf airo:TrainingDataRiskSource ;
+    skos:definition "Incompleteness of training data set"@en ;
+    skos:inScheme <https://w3id.org/vair#> ;
+    skos:prefLabel "Incomplete Training Data"@en ;
+    skos:related vair:TrainingData .
+
+vair:IncompleteValidationData
+    a owl:Class, owl:NamedIndividual, skos:Concept, vair:Concept ;
+    rdfs:isDefinedBy <https://w3id.org/vair#> ;
+    rdfs:subClassOf airo:ValidationDataRiskSource ;
+    skos:definition "Incompleteness of validation data set"@en ;
+    skos:inScheme <https://w3id.org/vair#> ;
+    skos:prefLabel "Incomplete Validation Data"@en ;
+    skos:related vair:ValidationData .
+
+vair:IndividualRiskAssessment
+    a owl:Class, owl:NamedIndividual, skos:Concept, vair:Concept ;
+    rdfs:isDefinedBy <https://w3id.org/vair#> ;
+    rdfs:subClassOf vair:Assessment ;
+    skos:definition "Assessing the risk of a natural person for offending or reoffending or the risk for potential victims of criminal offences"@en ;
+    skos:inScheme <https://w3id.org/vair#> ;
+    skos:prefLabel "Individual Risk Assessment"@en ;
+    skos:related vair:LawEnforcement .
+
+vair:InductiveProgramming
+    a owl:Class, owl:NamedIndividual, skos:Concept, vair:Concept ;
+    rdfs:isDefinedBy <https://w3id.org/vair#> ;
+    rdfs:subClassOf vair:KnowledgeBasedTechnique ;
+    skos:definition ""@en ;
+    skos:inScheme <https://w3id.org/vair#> ;
+    skos:prefLabel "Inductive Programming"@en .
+
+vair:IndustrialRobot
+    a owl:Class, owl:NamedIndividual, skos:Concept, vair:Concept ;
+    rdfs:isDefinedBy <https://w3id.org/vair#> ;
+    rdfs:subClassOf vair:RobotSystem ;
+    skos:definition ""@en ;
+    skos:inScheme <https://w3id.org/vair#> ;
+    skos:prefLabel "Industrial Robot"@en .
+
+vair:Inference
+    a owl:Class, owl:NamedIndividual, skos:Concept, vair:Concept ;
+    rdfs:isDefinedBy <https://w3id.org/vair#> ;
+    rdfs:subClassOf airo:Output ;
+    skos:definition ""@en ;
+    skos:inScheme <https://w3id.org/vair#> ;
+    skos:prefLabel ""@en .
+
+vair:InformationProvision
+    a owl:Class, owl:NamedIndividual, skos:Concept, vair:Concept ;
+    rdfs:isDefinedBy <https://w3id.org/vair#> ;
+    rdfs:subClassOf airo:OrganisationalControl ;
+    skos:definition "providing information to inform the user of in particular an AI system’s intended purpose and proper use, inclusive of the specific geographical, behavioural or functional setting within which the  AI system is intended to be used."@en ;
+    skos:inScheme <https://w3id.org/vair#> ;
+    skos:prefLabel "Information Provision"@en .
+
+vair:InformationRetrieval
+    a owl:Class, owl:NamedIndividual, skos:Concept, vair:Concept ;
+    rdfs:isDefinedBy <https://w3id.org/vair#> ;
+    rdfs:subClassOf airo:Capability ;
+    skos:definition "retrieving relevant documents or parts of documents from a dataset, typically based on keyword or natural language queries. [ISO/IEC 22989, 3.6.4]"@en ;
+    skos:inScheme <https://w3id.org/vair#> ;
+    skos:prefLabel "Information Retrieval"@en .
+
+vair:InputData
+    a owl:NamedIndividual, skos:Concept, vair:Concept ;
+    rdfs:isDefinedBy <https://w3id.org/vair#> ;
+    skos:definition "data for which an AI system calculates a predicted output or inference. [ISO/IEC 22989, 3.2.9]"@en ;
+    skos:inScheme <https://w3id.org/vair#> ;
+    skos:prefLabel "Input Data"@en .
+
+vair:InsufficientHumanOversightMeasure
+    a owl:Class, owl:NamedIndividual, skos:Concept, vair:Concept ;
+    rdfs:isDefinedBy <https://w3id.org/vair#> ;
+    rdfs:subClassOf airo:OrganisationalRiskSource ;
+    skos:definition ""@en ;
+    skos:inScheme <https://w3id.org/vair#> ;
+    skos:prefLabel "Insufficient Human Oversight Measure"@en .
+
+vair:InsufficientInstruction
+    a owl:Class, owl:NamedIndividual, skos:Concept, vair:Concept ;
+    rdfs:isDefinedBy <https://w3id.org/vair#> ;
+    rdfs:subClassOf airo:OrganisationalRiskSource ;
+    skos:definition "Lack of appropriate instruction for use"@en ;
+    skos:inScheme <https://w3id.org/vair#> ;
+    skos:prefLabel "Insufficient Instruction"@en .
+
+vair:IntelligentControlSystem
+    a owl:Class, owl:NamedIndividual, skos:Concept, vair:Concept ;
+    rdfs:isDefinedBy <https://w3id.org/vair#> ;
+    rdfs:subClassOf airo:AISystem ;
+    skos:definition ""@en ;
+    skos:inScheme <https://w3id.org/vair#> ;
+    skos:prefLabel "Intelligent Control System"@en .
+
+vair:InterpretingFacts
+    a owl:Class, owl:NamedIndividual, skos:Concept, vair:Concept ;
+    rdfs:isDefinedBy <https://w3id.org/vair#> ;
+    rdfs:subClassOf airo:Purpose, vair:KnowledgeReasoning ;
+    skos:definition "Researching and interpreting facts"@en ;
+    skos:inScheme <https://w3id.org/vair#> ;
+    skos:prefLabel "Interpreting Facts"@en ;
+    skos:related vair:Law .
+
+vair:InterpretingLaw
+    a owl:Class, owl:NamedIndividual, skos:Concept, vair:Concept ;
+    rdfs:isDefinedBy <https://w3id.org/vair#> ;
+    rdfs:subClassOf airo:Purpose, vair:KnowledgeReasoning ;
+    skos:definition "Researching and interpreting the law"@en ;
+    skos:inScheme <https://w3id.org/vair#> ;
+    skos:prefLabel "Interpreting Law"@en ;
+    skos:related vair:Law .
+
+vair:Interruption
+    a owl:Class, owl:NamedIndividual, skos:Concept, vair:Concept ;
+    rdfs:isDefinedBy <https://w3id.org/vair#> ;
+    rdfs:subClassOf airo:OperationalControl ;
+    skos:definition "Interrupting the system's operation"@en ;
+    skos:inScheme <https://w3id.org/vair#> ;
+    skos:prefLabel "Interruption"@en .
+
+vair:Intervention
+    a owl:Class, owl:NamedIndividual, skos:Concept, vair:Concept ;
+    rdfs:isDefinedBy <https://w3id.org/vair#> ;
+    rdfs:subClassOf airo:OperationalControl ;
+    skos:definition "Intervention of system's operation"@en ;
+    skos:inScheme <https://w3id.org/vair#> ;
+    skos:prefLabel "Intervention"@en .
+
+vair:InvestigatingCriminalOffences
+    a owl:Class, owl:NamedIndividual, skos:Concept, vair:Concept ;
+    rdfs:isDefinedBy <https://w3id.org/vair#> ;
+    rdfs:subClassOf airo:Purpose ;
+    skos:definition ""@en ;
+    skos:inScheme <https://w3id.org/vair#> ;
+    skos:prefLabel "Investigating Criminal Offences"@en ;
+    skos:related vair:LawEnforcement .
+
+vair:IoTSystem
+    a owl:Class, owl:NamedIndividual, skos:Concept, vair:Concept ;
+    rdfs:isDefinedBy <https://w3id.org/vair#> ;
+    rdfs:subClassOf airo:AISystem ;
+    skos:definition "system providing functionalities of IoT. [ISO/IEC 22989, 3.1.20]"@en ;
+    skos:inScheme <https://w3id.org/vair#> ;
+    skos:prefLabel "IoT System"@en .
+
+vair:IrrelevantTestData
+    a owl:Class, owl:NamedIndividual, skos:Concept, vair:Concept ;
+    rdfs:isDefinedBy <https://w3id.org/vair#> ;
+    rdfs:subClassOf airo:TestDataRiskSource ;
+    skos:definition ""@en ;
+    skos:inScheme <https://w3id.org/vair#> ;
+    skos:prefLabel "Irrelevant Test Data"@en ;
+    skos:related vair:TestData .
+
+vair:IrrelevantTrainingData
+    a owl:Class, owl:NamedIndividual, skos:Concept, vair:Concept ;
+    rdfs:isDefinedBy <https://w3id.org/vair#> ;
+    rdfs:subClassOf airo:TrainingDataRiskSource ;
+    skos:definition ""@en ;
+    skos:inScheme <https://w3id.org/vair#> ;
+    skos:prefLabel "Irrelevant Training Data"@en ;
+    skos:related vair:TrainingData .
+
+vair:IrrelevantValidationData
+    a owl:Class, owl:NamedIndividual, skos:Concept, vair:Concept ;
+    rdfs:isDefinedBy <https://w3id.org/vair#> ;
+    rdfs:subClassOf airo:ValidationDataRiskSource ;
+    skos:definition ""@en ;
+    skos:inScheme <https://w3id.org/vair#> ;
+    skos:prefLabel "Irrelevant Validation Data"@en ;
+    skos:related vair:ValidationData .
+
+vair:JobApplicant
+    a owl:Class, owl:NamedIndividual, skos:Concept, vair:Concept ;
+    rdfs:isDefinedBy <https://w3id.org/vair#> ;
+    rdfs:subClassOf airo:AISubject ;
+    skos:definition "A person who has made an application for employment"@en ;
+    skos:inScheme <https://w3id.org/vair#> ;
+    skos:prefLabel "Job Applicant"@en .
+
+vair:JobApplicationAnalysis
+    a owl:Class, owl:NamedIndividual, skos:Concept, vair:Concept ;
+    rdfs:isDefinedBy <https://w3id.org/vair#> ;
+    rdfs:subClassOf airo:Purpose ;
+    skos:definition ""@en ;
+    skos:inScheme <https://w3id.org/vair#> ;
+    skos:prefLabel "Job Application Analysis"@en ;
+    skos:related vair:Employment .
+
+vair:JobApplicationFiltering
+    a owl:Class, owl:NamedIndividual, skos:Concept, vair:Concept ;
+    rdfs:isDefinedBy <https://w3id.org/vair#> ;
+    rdfs:subClassOf airo:Purpose, vair:Assessment ;
+    skos:definition "Filtering applications for recruitment or selection of natural persons"@en ;
+    skos:inScheme <https://w3id.org/vair#> ;
+    skos:prefLabel "Job Application Filtering"@en ;
+    skos:related vair:Employment .
+
+vair:JudicialAuthority
+    a owl:Class, owl:NamedIndividual, skos:Concept, vair:Concept ;
+    rdfs:isDefinedBy <https://w3id.org/vair#> ;
+    rdfs:subClassOf airo:AIUser ;
+    skos:definition "judicial authorities"@en ;
+    skos:inScheme <https://w3id.org/vair#> ;
+    skos:prefLabel "Judicial Authority "@en .
+
+vair:JudicialAuthorityRepresentative
+    a owl:Class, owl:NamedIndividual, skos:Concept, vair:Concept ;
+    rdfs:isDefinedBy <https://w3id.org/vair#> ;
+    rdfs:subClassOf airo:AIUser ;
+    skos:definition "an entity that acts on behalf on judicial authorities"@en ;
+    skos:inScheme <https://w3id.org/vair#> ;
+    skos:prefLabel "Judicial Authority Representative"@en .
+
+vair:KnowledgeBasedTechnique
+    a owl:Class, owl:NamedIndividual, skos:Concept, vair:Concept ;
+    rdfs:isDefinedBy <https://w3id.org/vair#> ;
+    rdfs:subClassOf airo:Technique ;
+    skos:definition ""@en ;
+    skos:inScheme <https://w3id.org/vair#> ;
+    skos:prefLabel "Knowledge Based Technique"@en .
+
+vair:KnowledgeReasoning
+    a owl:Class, owl:NamedIndividual, skos:Concept, vair:Concept ;
+    rdfs:isDefinedBy <https://w3id.org/vair#> ;
+    rdfs:subClassOf airo:Purpose ;
+    skos:definition "Capturing knowledge and acquiring new knowledge"@en ;
+    skos:inScheme <https://w3id.org/vair#> ;
+    skos:prefLabel "Knowledge Reasoning"@en .
+
+vair:KnowledgeRepresentation
+    a owl:Class, owl:NamedIndividual, skos:Concept, vair:Concept ;
+    rdfs:isDefinedBy <https://w3id.org/vair#> ;
+    rdfs:subClassOf vair:KnowledgeBasedTechnique ;
+    skos:definition ""@en ;
+    skos:inScheme <https://w3id.org/vair#> ;
+    skos:prefLabel "Knowledge Representation"@en .
+
+vair:LackOfTransparency
+    a owl:Class, owl:NamedIndividual, skos:Concept, vair:Concept ;
+    rdfs:isDefinedBy <https://w3id.org/vair#> ;
+    rdfs:subClassOf airo:OrganisationalRiskSource ;
+    skos:definition ""@en ;
+    skos:inScheme <https://w3id.org/vair#> ;
+    skos:prefLabel "Lack Of Transparency"@en .
+
+vair:LawEnforcement
+    a owl:Class ;
+    rdfs:isDefinedBy <https://w3id.org/vair#> ;
+    rdfs:subClassOf airo:Domain ;
+    skos:definition ""@en ;
+    skos:inScheme <https://w3id.org/vair#> ;
+    skos:prefLabel "Law Enforcement"@en .
+
+vair:LawEnforcementAuthority
+    a owl:Class, owl:NamedIndividual, skos:Concept, vair:Concept ;
+    rdfs:isDefinedBy <https://w3id.org/vair#> ;
+    rdfs:subClassOf airo:AIUser ;
+    skos:definition "any public authority competent for the prevention, investigation, detection or prosecution of criminal offences or the execution of criminal penalties, including the safeguarding against and the prevention of threats to public security; or any other body or entity entrusted by Member State law to exercise public authority and public powers for the purposes of the prevention, investigation, detection or prosecution of criminal offences or the execution of criminal penalties, including the safeguarding against and the prevention of threats to public security;"@en ;
+    skos:inScheme <https://w3id.org/vair#> ;
+    skos:prefLabel "Law Enforcement Authority"@en .
+
+vair:LawEnforcementAuthorityRepresentative
+    a owl:Class, owl:NamedIndividual, skos:Concept, vair:Concept ;
+    rdfs:isDefinedBy <https://w3id.org/vair#> ;
+    rdfs:subClassOf airo:AIUser ;
+    skos:definition "an entity that acts on behalf of law enforcement authorities"@en ;
+    skos:inScheme <https://w3id.org/vair#> ;
+    skos:prefLabel "Law Enforcement Authority Representative"@en .
+
+vair:LearningTechnique
+    a owl:Class, owl:NamedIndividual, skos:Concept, vair:Concept ;
+    rdfs:isDefinedBy <https://w3id.org/vair#> ;
+    rdfs:subClassOf airo:Technique ;
+    skos:definition ""@en ;
+    skos:inScheme <https://w3id.org/vair#> ;
+    skos:prefLabel "Learning Technique"@en .
+
+vair:Library
+    a owl:Class, owl:NamedIndividual, skos:Concept, vair:Concept ;
+    rdfs:isDefinedBy <https://w3id.org/vair#> ;
+    rdfs:subClassOf airo:AIComponent ;
+    skos:definition ""@en ;
+    skos:inScheme <https://w3id.org/vair#> ;
+    skos:prefLabel "Library"@en ;
+    skos:related vair:MachineLearningTechnique .
+
+vair:LieDetection
+    a owl:Class ;
+    rdfs:isDefinedBy <https://w3id.org/vair#> ;
+    rdfs:subClassOf airo:Capability ;
+    skos:definition "Detecting lies"@en ;
+    skos:inScheme <https://w3id.org/vair#> ;
+    skos:prefLabel "Lie Detection"@en .
+
+vair:LifeInsurancePricing
+    a owl:Class, owl:NamedIndividual, skos:Concept, vair:Concept ;
+    rdfs:isDefinedBy <https://w3id.org/vair#> ;
+    rdfs:subClassOf vair:DecisionMaking ;
+    skos:definition ""@en ;
+    skos:inScheme <https://w3id.org/vair#> ;
+    skos:prefLabel "Life Insurance Pricing"@en ;
+    skos:related vair:PrivateService, vair:PublicService .
+
+vair:LifeInsuranceRiskAssessment
+    a owl:Class, owl:NamedIndividual, skos:Concept, vair:Concept ;
+    rdfs:isDefinedBy <https://w3id.org/vair#> ;
+    rdfs:subClassOf airo:Purpose, vair:Assessment ;
+    skos:definition ""@en ;
+    skos:inScheme <https://w3id.org/vair#> ;
+    skos:prefLabel "Life Insurance Risk Assessment"@en ;
+    skos:related vair:PrivateService, vair:PublicService .
+
+vair:LogicBasedTechnique
+    a owl:Class, owl:NamedIndividual, skos:Concept, vair:Concept ;
+    rdfs:isDefinedBy <https://w3id.org/vair#> ;
+    rdfs:subClassOf airo:Technique ;
+    skos:definition ""@en ;
+    skos:inScheme <https://w3id.org/vair#> ;
+    skos:prefLabel "Logic Based Technique"@en .
+
+vair:LongShortTermMemory
+    a owl:Class, owl:NamedIndividual, skos:Concept, vair:Concept ;
+    rdfs:isDefinedBy <https://w3id.org/vair#> ;
+    rdfs:subClassOf vair:RecurrentNeuralNetwork ;
+    skos:definition "type of recurrent neural network that processes sequential data with a satisfactory performance for both long and short span dependencies. [ISO/IEC 22989 3.4.7]"@en ;
+    skos:inScheme <https://w3id.org/vair#> ;
+    skos:prefLabel "Long ShortTerm Memory"@en .
+
+vair:LowAccuracy
+    a owl:Class, owl:NamedIndividual, skos:Concept, vair:Concept ;
+    rdfs:isDefinedBy <https://w3id.org/vair#> ;
+    rdfs:subClassOf airo:PerfomanceRiskSource ;
+    skos:definition "Inacurracy of the predictions, recommondations, or decisions produced by the system."@en ;
+    skos:inScheme <https://w3id.org/vair#> ;
+    skos:prefLabel "Low Accuracy"@en .
+
+vair:LowRobustness
+    a owl:Class, owl:NamedIndividual, skos:Concept, vair:Concept ;
+    rdfs:isDefinedBy <https://w3id.org/vair#> ;
+    rdfs:subClassOf airo:PerfomanceRiskSource ;
+    skos:definition ""@en ;
+    skos:inScheme <https://w3id.org/vair#> ;
+    skos:prefLabel "Low Robustness"@en .
+
+vair:LowSecurity
+    a owl:Class, owl:NamedIndividual, skos:Concept, vair:Concept ;
+    rdfs:isDefinedBy <https://w3id.org/vair#> ;
+    rdfs:subClassOf airo:PerfomanceRiskSource ;
+    skos:definition "Lack Of Appropriate Level Of Security."@en ;
+    skos:inScheme <https://w3id.org/vair#> ;
+    skos:prefLabel "Low Security"@en .
+
+vair:MachineLearningAlgorithm
+    a owl:Class, owl:NamedIndividual, skos:Concept, vair:Concept ;
+    rdfs:isDefinedBy <https://w3id.org/vair#> ;
+    skos:definition "algorithm to determine parameters of a machine learning model from data according to given criteria.  [ISO/IEC 22989 3.3.6]"@en ;
+    skos:inScheme <https://w3id.org/vair#> ;
+    skos:prefLabel "Machine Learning Algorithm"@en ;
+    skos:related vair:MachineLearningTechnique .
+
+vair:MachineLearningFramework
+    a owl:Class, owl:NamedIndividual, skos:Concept, vair:Concept ;
+    rdfs:isDefinedBy <https://w3id.org/vair#> ;
+    rdfs:subClassOf vair:Framework ;
+    skos:definition ""@en ;
+    skos:inScheme <https://w3id.org/vair#> ;
+    skos:prefLabel "Machine Learning Framework"@en .
+
+vair:MachineLearningLibrary
+    a owl:Class, owl:NamedIndividual, skos:Concept, vair:Concept ;
+    rdfs:isDefinedBy <https://w3id.org/vair#> ;
+    rdfs:subClassOf vair:Library ;
+    skos:definition ""@en ;
+    skos:inScheme <https://w3id.org/vair#> ;
+    skos:prefLabel "Machine Learning Library"@en ;
+    skos:related vair:MachineLearningTechnique .
+
+vair:MachineLearningModel
+    a owl:Class, owl:NamedIndividual, skos:Concept, vair:Concept ;
+    rdfs:isDefinedBy <https://w3id.org/vair#> ;
+    rdfs:subClassOf vair:Model ;
+    skos:definition "mathematical construct that generates an inference or prediction  based on input data or information. [ISO/IEC 22989, 3.3.7]"@en ;
+    skos:inScheme <https://w3id.org/vair#> ;
+    skos:prefLabel "Machine Learning Model"@en ;
+    skos:related vair:MachineLearningTechnique .
+
+vair:MachineLearningPlatform
+    a owl:Class, owl:NamedIndividual, skos:Concept, vair:Concept ;
+    rdfs:isDefinedBy <https://w3id.org/vair#> ;
+    rdfs:subClassOf vair:Platform ;
+    skos:definition ""@en ;
+    skos:inScheme <https://w3id.org/vair#> ;
+    skos:prefLabel "Machine Learning Platform"@en .
+
+vair:MachineLearningTechnique
+    a owl:Class, owl:NamedIndividual, skos:Concept, vair:Concept ;
+    rdfs:isDefinedBy <https://w3id.org/vair#> ;
+    rdfs:subClassOf vair:LearningTechnique ;
+    skos:definition ""@en ;
+    skos:inScheme <https://w3id.org/vair#> ;
+    skos:prefLabel "MachineLearningTechnique"@en .
+
+vair:MachineTranslation
+    a owl:Class, owl:NamedIndividual, skos:Concept, vair:Concept ;
+    rdfs:isDefinedBy <https://w3id.org/vair#> ;
+    rdfs:subClassOf airo:Capability ;
+    skos:definition "Automated translation of text or speech from one natural language to another using a computer system. [ISO/IEC 22989, 3.6.5]"@en ;
+    skos:inScheme <https://w3id.org/vair#> ;
+    skos:prefLabel "Machine Translation"@en .
+
+vair:MakingPrediction
+    a owl:Class, owl:NamedIndividual, skos:Concept, vair:Concept ;
+    rdfs:isDefinedBy <https://w3id.org/vair#> ;
+    rdfs:subClassOf airo:Purpose ;
+    skos:definition "Predicting something based on the existing information"@en ;
+    skos:inScheme <https://w3id.org/vair#> ;
+    skos:prefLabel "Making Prediction"@en .
+
+vair:MakingPromotionDecision
+    a owl:Class, owl:NamedIndividual, skos:Concept, vair:Concept ;
+    rdfs:isDefinedBy <https://w3id.org/vair#> ;
+    rdfs:subClassOf airo:Purpose, vair:Assessment ;
+    skos:definition "Making decisions on promotion"@en ;
+    skos:inScheme <https://w3id.org/vair#> ;
+    skos:prefLabel "Making Promotion Decision"@en ;
+    skos:related vair:Employment .
+
+vair:MakingTerminationDecision
+    a owl:Class, owl:NamedIndividual, skos:Concept, vair:Concept ;
+    rdfs:isDefinedBy <https://w3id.org/vair#> ;
+    rdfs:subClassOf airo:Purpose, vair:Assessment ;
+    skos:definition "Making decisions on termination of work-related contractual relationship"@en ;
+    skos:inScheme <https://w3id.org/vair#> ;
+    skos:prefLabel "Making Termination Decision"@en ;
+    skos:related vair:Employment .
+
+vair:ManagementAndOperationOfSafety
+    a owl:Class, owl:NamedIndividual, skos:Concept, vair:Concept ;
+    rdfs:isDefinedBy <https://w3id.org/vair#> ;
+    rdfs:subClassOf airo:Purpose ;
+    skos:definition ""@en ;
+    skos:inScheme <https://w3id.org/vair#> ;
+    skos:prefLabel "Management And Operation Of Safety"@en ;
+    skos:related vair:CriticalInfrastructure .
+
+vair:Managing
+    a owl:Class, owl:NamedIndividual, skos:Concept, vair:Concept ;
+    rdfs:isDefinedBy <https://w3id.org/vair#> ;
+    rdfs:subClassOf airo:Purpose ;
+    skos:definition ""@en ;
+    skos:inScheme <https://w3id.org/vair#> ;
+    skos:prefLabel "Managing"@en .
+
+vair:ManagingCriticalDigitalInfrastructure
+    a owl:Class, owl:NamedIndividual, skos:Concept, vair:Concept ;
+    rdfs:isDefinedBy <https://w3id.org/vair#> ;
+    rdfs:subClassOf vair:Managing ;
+    skos:definition ""@en ;
+    skos:inScheme <https://w3id.org/vair#> ;
+    skos:prefLabel "Managing Critical Digital Infrastructure"@en ;
+    skos:related vair:CriticalInfrastructure .
+
+vair:ManagingRoadTraffic
+    a owl:Class, owl:NamedIndividual, skos:Concept, vair:Concept ;
+    rdfs:isDefinedBy <https://w3id.org/vair#> ;
+    rdfs:subClassOf vair:Managing ;
+    skos:definition ""@en ;
+    skos:inScheme <https://w3id.org/vair#> ;
+    skos:prefLabel "Managing Road Traffic"@en ;
+    skos:related vair:CriticalInfrastructure .
+
+vair:ManagingSupplyOfElectricity
+    a owl:Class, owl:NamedIndividual, skos:Concept, vair:Concept ;
+    rdfs:isDefinedBy <https://w3id.org/vair#> ;
+    rdfs:subClassOf vair:Managing ;
+    skos:definition ""@en ;
+    skos:inScheme <https://w3id.org/vair#> ;
+    skos:prefLabel "Managing Supply Of Electricity"@en ;
+    skos:related vair:CriticalInfrastructure .
+
+vair:ManagingSupplyOfGas
+    a owl:Class, owl:NamedIndividual, skos:Concept, vair:Concept ;
+    rdfs:isDefinedBy <https://w3id.org/vair#> ;
+    rdfs:subClassOf vair:Managing ;
+    skos:definition ""@en ;
+    skos:inScheme <https://w3id.org/vair#> ;
+    skos:prefLabel "Managing Supply Of Gas"@en ;
+    skos:related vair:CriticalInfrastructure .
+
+vair:ManagingSupplyOfHeating
+    a owl:Class, owl:NamedIndividual, skos:Concept, vair:Concept ;
+    rdfs:isDefinedBy <https://w3id.org/vair#> ;
+    rdfs:subClassOf vair:Managing ;
+    skos:definition ""@en ;
+    skos:inScheme <https://w3id.org/vair#> ;
+    skos:prefLabel "Managing Supply Of Heating"@en ;
+    skos:related vair:CriticalInfrastructure .
+
+vair:ManagingSupplyOfWater
+    a owl:Class, owl:NamedIndividual, skos:Concept, vair:Concept ;
+    rdfs:isDefinedBy <https://w3id.org/vair#> ;
+    rdfs:subClassOf vair:Managing ;
+    skos:definition ""@en ;
+    skos:inScheme <https://w3id.org/vair#> ;
+    skos:prefLabel "Managing Supply Of Water"@en ;
+    skos:related vair:CriticalInfrastructure .
+
+vair:MarketSurveillanceAuthority
+    a owl:Class, owl:NamedIndividual, skos:Concept, vair:Concept ;
+    rdfs:isDefinedBy <https://w3id.org/vair#> ;
+    rdfs:subClassOf vair:NationalAuthority ;
+    skos:definition ""@en, "the national authority carrying out the activities and taking the measures pursuant to Regulation (EU) 2019/1020"@en ;
+    skos:inScheme <https://w3id.org/vair#> ;
+    skos:prefLabel "Market Surveillance Authority"@en .
+
+vair:Migration
+    a owl:Class, owl:NamedIndividual, skos:Concept, vair:Concept ;
+    rdfs:isDefinedBy <https://w3id.org/vair#> ;
+    rdfs:subClassOf airo:Domain ;
+    skos:definition ""@en ;
+    skos:inScheme <https://w3id.org/vair#> ;
+    skos:prefLabel "Migration"@en .
+
+vair:Model
+    a owl:Class, owl:NamedIndividual, skos:Concept, vair:Concept ;
+    rdfs:isDefinedBy <https://w3id.org/vair#> ;
+    rdfs:subClassOf airo:AIComponent ;
+    skos:definition "physical, mathematical or otherwise logical representation of a system, entity, phenomenon, process or data. [ISO/IEC 22989, 3.1.23]"@en ;
+    skos:inScheme <https://w3id.org/vair#> ;
+    skos:prefLabel "Model"@en .
+
+vair:ModelEvasion
+    a owl:Class, owl:NamedIndividual, skos:Concept, vair:Concept ;
+    rdfs:isDefinedBy <https://w3id.org/vair#> ;
+    rdfs:subClassOf vair:Attack ;
+    skos:definition ""@en ;
+    skos:inScheme <https://w3id.org/vair#> ;
+    skos:prefLabel "Model Evasion"@en ;
+    skos:related vair:Model .
+
+vair:ModelInversion
+    a owl:Class, owl:NamedIndividual, skos:Concept, vair:Concept ;
+    rdfs:isDefinedBy <https://w3id.org/vair#> ;
+    rdfs:subClassOf vair:Attack ;
+    skos:definition ""@en ;
+    skos:inScheme <https://w3id.org/vair#> ;
+    skos:prefLabel "Model Inversion"@en ;
+    skos:related vair:Model .
+
+vair:Monitoring
+    a owl:Class, owl:NamedIndividual, skos:Concept, vair:Concept ;
+    rdfs:isDefinedBy <https://w3id.org/vair#> ;
+    rdfs:subClassOf airo:AILifecyclePhase, airo:Purpose ;
+    skos:definition ""@en, "Observing and keeping track of something"@en ;
+    skos:inScheme <https://w3id.org/vair#> ;
+    skos:prefLabel "Monitoring"@en .
+
+vair:MonitoringEmployeeBehaviour
+    a owl:Class, owl:NamedIndividual, skos:Concept, vair:Concept ;
+    rdfs:isDefinedBy <https://w3id.org/vair#> ;
+    rdfs:subClassOf airo:Purpose, vair:Monitoring ;
+    skos:definition ""@en ;
+    skos:inScheme <https://w3id.org/vair#> ;
+    skos:prefLabel "Monitoring Employee Behaviour"@en ;
+    skos:related vair:Employment .
+
+vair:MonitoringEmployeePerformance
+    a owl:Class, owl:NamedIndividual, skos:Concept, vair:Concept ;
+    rdfs:isDefinedBy <https://w3id.org/vair#> ;
+    rdfs:subClassOf airo:Purpose, vair:Monitoring ;
+    skos:definition ""@en ;
+    skos:inScheme <https://w3id.org/vair#> ;
+    skos:prefLabel "Monitoring Employee Performance"@en ;
+    skos:related vair:Employment .
+
+vair:MultiAgentSystem
+    a owl:Class, owl:NamedIndividual, skos:Concept, vair:Concept ;
+    rdfs:isDefinedBy <https://w3id.org/vair#> ;
+    rdfs:subClassOf airo:AISystem ;
+    skos:definition ""@en ;
+    skos:inScheme <https://w3id.org/vair#> ;
+    skos:prefLabel "Multi Agent System"@en .
+
+vair:MusicInformationRetrieval
+    a owl:Class, owl:NamedIndividual, skos:Concept, vair:Concept ;
+    rdfs:isDefinedBy <https://w3id.org/vair#> ;
+    rdfs:subClassOf vair:InformationRetrieval ;
+    skos:definition ""@en ;
+    skos:inScheme <https://w3id.org/vair#> ;
+    skos:prefLabel "Music Information Retrieval"@en .
+
+vair:NamedEntityRecognition
+    a owl:Class, owl:NamedIndividual, skos:Concept, vair:Concept ;
+    rdfs:isDefinedBy <https://w3id.org/vair#> ;
+    rdfs:subClassOf airo:Capability ;
+    skos:definition "recognizing and labelling the denotational names of entities and their categories for sequences of words in a stream of text or speech. [ISO/IEC 22989, 3.6.6]"@en ;
+    skos:inScheme <https://w3id.org/vair#> ;
+    skos:prefLabel "Named Entity Recognition"@en .
+
+vair:NarrowAI
+    a owl:Class, owl:NamedIndividual, skos:Concept, vair:Concept ;
+    rdfs:isDefinedBy <https://w3id.org/vair#> ;
+    rdfs:subClassOf airo:AISystem ;
+    skos:definition "type of AI system that is focused on defined tasks to address a specific problem. [ISO/IEC 22989, 3.1.24]"@en ;
+    skos:inScheme <https://w3id.org/vair#> ;
+    skos:prefLabel "Narrow AI"@en .
+
+vair:NationalAuthority
+    a owl:Class .
+
+vair:NationalCompetentAuthority
+    a owl:Class, owl:NamedIndividual, skos:Concept, vair:Concept ;
+    rdfs:isDefinedBy <https://w3id.org/vair#> ;
+    rdfs:subClassOf airo:Stakeholder ;
+    skos:definition "refers to any of the following: the national supervisory authority  and the market surveillance authority. As regards AI systems put into service or used by EU institutions, agencies, offices and bodies, the European Data Protection Supervisor shall fulfil the responsibilities that in the Member States are entrusted to the national competent authority and, as relevant, any reference to national competent authorities or market surveillance authorities in this Regulation shall be understood as referring to the European Data Protection Supervisor"@en ;
+    skos:inScheme <https://w3id.org/vair#> ;
+    skos:prefLabel "National Competent Authority"@en .
+
+vair:NationalPublicAuthority
+    a owl:Class, owl:NamedIndividual, skos:Concept, vair:Concept ;
+    rdfs:isDefinedBy <https://w3id.org/vair#> ;
+    rdfs:subClassOf vair:PublicAuthority ;
+    skos:definition ""@en ;
+    skos:inScheme <https://w3id.org/vair#> ;
+    skos:prefLabel "National Public Authority"@en .
+
+vair:NaturalLanguageGeneration
+    a owl:Class, owl:NamedIndividual, skos:Concept, vair:Concept ;
+    rdfs:isDefinedBy <https://w3id.org/vair#> ;
+    rdfs:subClassOf airo:Capability ;
+    skos:definition "Converting data carrying semantics into natural language. [ISO/IEC 22989, 3.6.8]"@en ;
+    skos:inScheme <https://w3id.org/vair#> ;
+    skos:prefLabel "Natural Language Generation"@en .
+
+vair:NaturalLanguageProcessingSystem
+    a owl:Class, owl:NamedIndividual, skos:Concept, vair:Concept ;
+    rdfs:isDefinedBy <https://w3id.org/vair#> ;
+    rdfs:subClassOf airo:AISystem ;
+    skos:definition "information processing based upon natural language understanding or natural language generation. [ISO/IEC 22989, 3.6.9]"@en ;
+    skos:inScheme <https://w3id.org/vair#> ;
+    skos:prefLabel "Natural Language Processing System"@en .
+
+vair:NaturalPerson
+    a owl:Class, owl:NamedIndividual, skos:Concept, vair:Concept ;
+    rdfs:isDefinedBy <https://w3id.org/vair#> ;
+    rdfs:subClassOf airo:AISubject ;
+    skos:definition "An individual human being"@en ;
+    skos:inScheme <https://w3id.org/vair#> ;
+    skos:prefLabel "Natural Person"@en .
+
+vair:NeuralNetwork
+    a owl:Class, owl:NamedIndividual, skos:Concept, vair:Concept ;
+    rdfs:isDefinedBy <https://w3id.org/vair#> ;
+    rdfs:subClassOf airo:Algorithm ;
+    skos:definition "network of one or more layers of neurons connected by weighted links with adjustable weights, which takes input data and produces an output. [ISO/IEC 22989 3.4.8]"@en ;
+    skos:inScheme <https://w3id.org/vair#> ;
+    skos:prefLabel "Neural Network"@en .
+
+vair:NotifiedBody
+    a owl:Class, owl:NamedIndividual, skos:Concept, vair:Concept ;
+    rdfs:isDefinedBy <https://w3id.org/vair#> ;
+    rdfs:subClassOf vair:ConformityAssessmentBody ;
+    skos:definition "a conformity assessment body designated in accordance with the AI Act and other relevant Union harmonisation legislation"@en ;
+    skos:inScheme <https://w3id.org/vair#> ;
+    skos:prefLabel "Notified Body"@en .
+
+vair:NotifyingAuthority
+    a owl:Class, owl:NamedIndividual, skos:Concept, vair:Concept ;
+    rdfs:isDefinedBy <https://w3id.org/vair#> ;
+    rdfs:subClassOf vair:NationalAuthority ;
+    skos:definition "the national authority responsible for setting up and carrying out the necessary procedures for the assessment, designation and notification of conformity assessment bodies and for their monitoring"@en ;
+    skos:inScheme <https://w3id.org/vair#> ;
+    skos:prefLabel "Notifying Authority"@en .
+
+vair:ObjectRecognition
+    a owl:Class, owl:NamedIndividual, skos:Concept, vair:Concept ;
+    rdfs:isDefinedBy <https://w3id.org/vair#> ;
+    rdfs:subClassOf airo:Capability ;
+    skos:definition ""@en ;
+    skos:inScheme <https://w3id.org/vair#> ;
+    skos:prefLabel "Object Recognition"@en .
+
+vair:Operating
+    a owl:Class, owl:NamedIndividual, skos:Concept, vair:Concept ;
+    rdfs:isDefinedBy <https://w3id.org/vair#> ;
+    rdfs:subClassOf airo:Purpose ;
+    skos:definition ""@en ;
+    skos:inScheme <https://w3id.org/vair#> ;
+    skos:prefLabel "Operating"@en .
+
+vair:OperatingCriticalDigitalInfrastructure
+    a owl:Class, owl:NamedIndividual, skos:Concept, vair:Concept ;
+    rdfs:isDefinedBy <https://w3id.org/vair#> ;
+    rdfs:subClassOf vair:Operating ;
+    skos:definition ""@en ;
+    skos:inScheme <https://w3id.org/vair#> ;
+    skos:prefLabel "Operating Critical Digital Infrastructure"@en ;
+    skos:related vair:CriticalInfrastructure .
+
+vair:OperatingRoadTraffic
+    a owl:Class, owl:NamedIndividual, skos:Concept, vair:Concept ;
+    rdfs:isDefinedBy <https://w3id.org/vair#> ;
+    rdfs:subClassOf vair:Operating ;
+    skos:definition ""@en ;
+    skos:inScheme <https://w3id.org/vair#> ;
+    skos:prefLabel "Operating Road Traffic"@en ;
+    skos:related vair:CriticalInfrastructure .
+
+vair:OperatingSupplyOfElectricity
+    a owl:Class, owl:NamedIndividual, skos:Concept, vair:Concept ;
+    rdfs:isDefinedBy <https://w3id.org/vair#> ;
+    rdfs:subClassOf vair:Operating ;
+    skos:definition ""@en ;
+    skos:inScheme <https://w3id.org/vair#> ;
+    skos:prefLabel "Operating Supply Of Electricity"@en ;
+    skos:related vair:CriticalInfrastructure .
+
+vair:OperatingSupplyOfGas
+    a owl:Class, owl:NamedIndividual, skos:Concept, vair:Concept ;
+    rdfs:isDefinedBy <https://w3id.org/vair#> ;
+    rdfs:subClassOf vair:Operating ;
+    skos:definition ""@en ;
+    skos:inScheme <https://w3id.org/vair#> ;
+    skos:prefLabel "Operating Supply Of Gas"@en ;
+    skos:related vair:CriticalInfrastructure .
+
+vair:OperatingSupplyOfHeating
+    a owl:Class, owl:NamedIndividual, skos:Concept, vair:Concept ;
+    rdfs:isDefinedBy <https://w3id.org/vair#> ;
+    rdfs:subClassOf vair:Operating ;
+    skos:definition ""@en ;
+    skos:inScheme <https://w3id.org/vair#> ;
+    skos:prefLabel "Operating Supply Of Heating"@en ;
+    skos:related vair:CriticalInfrastructure .
+
+vair:OperatingSupplyOfWater
+    a owl:Class, owl:NamedIndividual, skos:Concept, vair:Concept ;
+    rdfs:isDefinedBy <https://w3id.org/vair#> ;
+    rdfs:subClassOf vair:Operating ;
+    skos:definition ""@en ;
+    skos:inScheme <https://w3id.org/vair#> ;
+    skos:prefLabel "Operating Supply Of Water"@en ;
+    skos:related vair:CriticalInfrastructure .
+
+vair:Operation
+    a owl:Class, owl:NamedIndividual, skos:Concept, vair:Concept ;
+    rdfs:isDefinedBy <https://w3id.org/vair#> ;
+    rdfs:subClassOf airo:AILifecyclePhase ;
+    skos:definition ""@en ;
+    skos:inScheme <https://w3id.org/vair#> ;
+    skos:prefLabel "Operation"@en .
+
+vair:OptimisationMethod
+    a owl:Class, owl:NamedIndividual, skos:Concept, vair:Concept ;
+    rdfs:isDefinedBy <https://w3id.org/vair#> ;
+    rdfs:subClassOf vair:StatisticalTechnique ;
+    skos:definition ""@en ;
+    skos:inScheme <https://w3id.org/vair#> ;
+    skos:prefLabel "Optimisation Method"@en .
+
+vair:Overreliance
+    a owl:Class, owl:NamedIndividual, skos:Concept, vair:Concept ;
+    rdfs:isDefinedBy <https://w3id.org/vair#> ;
+    rdfs:subClassOf airo:Impact ;
+    skos:definition "tendency of automatically relying or over-relying on the output produced by an AI system"@en ;
+    skos:inScheme <https://w3id.org/vair#> ;
+    skos:prefLabel "Overreliance"@en .
+
+vair:OverridingOutcome
+    a owl:Class, owl:NamedIndividual, skos:Concept, vair:Concept ;
+    rdfs:isDefinedBy <https://w3id.org/vair#> ;
+    rdfs:subClassOf airo:MitigationControl ;
+    skos:definition "Overriding outcome of a system."@en ;
+    skos:inScheme <https://w3id.org/vair#> ;
+    skos:prefLabel "Overriding Outcome"@en ;
+    skos:related vair:Outcome .
+
+vair:PartOfSpeechTagging
+    a owl:Class, owl:NamedIndividual, skos:Concept, vair:Concept ;
+    rdfs:isDefinedBy <https://w3id.org/vair#> ;
+    rdfs:subClassOf airo:Capability ;
+    skos:definition "assigning a category (e.g. verb, noun, adjective) to a word based on its grammatical properties. [ISO/IEC 22989, 3.6.13]"@en ;
+    skos:inScheme <https://w3id.org/vair#> ;
+    skos:prefLabel "Part Of Speech Tagging"@en .
+
+vair:Passenger
+    a owl:Class, owl:NamedIndividual, skos:Concept, vair:Concept ;
+    rdfs:isDefinedBy <https://w3id.org/vair#> ;
+    rdfs:subClassOf airo:AISubject ;
+    skos:definition "A person who has entered or intends to a territory."@en ;
+    skos:inScheme <https://w3id.org/vair#> ;
+    skos:prefLabel "Passenger"@en .
+
+vair:PatternRecognition
+    a owl:Class, owl:NamedIndividual, skos:Concept, vair:Concept ;
+    rdfs:isDefinedBy <https://w3id.org/vair#> ;
+    rdfs:subClassOf airo:Capability, vair:Detection ;
+    skos:definition ""@en, "Identification of unknown patterns in data"@en ;
+    skos:inScheme <https://w3id.org/vair#> ;
+    skos:prefLabel "Pattern Recognition"@en .
+
+vair:PerformingBackgroundCheck
+    a owl:Class, owl:NamedIndividual, skos:Concept, vair:Concept ;
+    rdfs:isDefinedBy <https://w3id.org/vair#> ;
+    rdfs:subClassOf airo:Purpose ;
+    skos:definition ""@en ;
+    skos:inScheme <https://w3id.org/vair#> ;
+    skos:prefLabel "Performing Background Check"@en ;
+    skos:related vair:LawEnforcement .
+
+vair:Perpetrator
+    a owl:Class, owl:NamedIndividual, skos:Concept, vair:Concept ;
+    rdfs:isDefinedBy <https://w3id.org/vair#> ;
+    rdfs:subClassOf airo:AISubject ;
+    skos:definition ""@en ;
+    skos:inScheme <https://w3id.org/vair#> ;
+    skos:prefLabel "Perpetrator"@en .
+
+vair:PersonalData
+    a owl:NamedIndividual, skos:Concept, vair:Concept ;
+    rdfs:isDefinedBy <https://w3id.org/vair#> ;
+    skos:definition "any information that (a) can be used to establish a link between the information and the natural person to whom such information relates, or (b) is or can be directly or indirectly linked to a natural person [ISO/IEC 22989, 3.2.11]"@en ;
+    skos:inScheme <https://w3id.org/vair#> ;
+    skos:prefLabel "Personal Data"@en .
+
+vair:PersonalityTraitsAnalysis
+    a owl:Class, owl:NamedIndividual, skos:Concept, vair:Concept ;
+    rdfs:isDefinedBy <https://w3id.org/vair#> ;
+    rdfs:subClassOf airo:Capability ;
+    skos:definition ""@en ;
+    skos:inScheme <https://w3id.org/vair#> ;
+    skos:prefLabel "Personality Traits Analysis"@en .
+
+vair:PhysicalHealth
+    a owl:Class, owl:NamedIndividual, skos:Concept, vair:Concept ;
+    rdfs:isDefinedBy <https://w3id.org/vair#> ;
+    rdfs:subClassOf vair:Health ;
+    skos:definition ""@en ;
+    skos:inScheme <https://w3id.org/vair#> ;
+    skos:prefLabel "Physical Health"@en .
+
+vair:PhysicalInjury
+    a owl:Class, owl:NamedIndividual, skos:Concept, vair:Concept ;
+    rdfs:isDefinedBy <https://w3id.org/vair#> ;
+    rdfs:subClassOf airo:WellbeingImpact ;
+    skos:definition ""@en ;
+    skos:inScheme <https://w3id.org/vair#> ;
+    skos:prefLabel "Physical Injury"@en .
+
+vair:Planning
+    a owl:Class, owl:NamedIndividual, skos:Concept, vair:Concept ;
+    rdfs:isDefinedBy <https://w3id.org/vair#> ;
+    rdfs:subClassOf vair:DecisionMaking ;
+    skos:definition ""@en ;
+    skos:inScheme <https://w3id.org/vair#> ;
+    skos:prefLabel "Planning"@en .
+
+vair:Platform
+    a owl:Class, owl:NamedIndividual, skos:Concept, vair:Concept ;
+    rdfs:isDefinedBy <https://w3id.org/vair#> ;
+    rdfs:subClassOf airo:AIComponent ;
+    skos:definition ""@en ;
+    skos:inScheme <https://w3id.org/vair#> ;
+    skos:prefLabel ""@en .
+
+vair:PotentialJobApplicant
+    a owl:Class, owl:NamedIndividual, skos:Concept, vair:Concept ;
+    rdfs:isDefinedBy <https://w3id.org/vair#> ;
+    rdfs:subClassOf airo:AISubject ;
+    skos:definition ""@en ;
+    skos:inScheme <https://w3id.org/vair#> ;
+    skos:prefLabel "Potential Job Applicant"@en .
+
+vair:PreTrainedModel
+    a owl:NamedIndividual, skos:Concept, vair:Concept ;
+    rdfs:isDefinedBy <https://w3id.org/vair#> ;
+    skos:definition ""@en ;
+    skos:inScheme <https://w3id.org/vair#> ;
+    skos:prefLabel ""@en .
+
+vair:PredictingOccurrenceOfCriminalOffence
+    a owl:Class, owl:NamedIndividual, skos:Concept, vair:Concept ;
+    rdfs:isDefinedBy <https://w3id.org/vair#> ;
+    rdfs:subClassOf airo:Purpose, vair:MakingPrediction ;
+    skos:definition ""@en ;
+    skos:inScheme <https://w3id.org/vair#> ;
+    skos:prefLabel "Predicting Occurrence Of Criminal Offence"@en ;
+    skos:related vair:LawEnforcement .
+
+vair:PredictingRecidivism
+    a owl:Class, owl:NamedIndividual, skos:Concept, vair:Concept ;
+    rdfs:isDefinedBy <https://w3id.org/vair#> ;
+    rdfs:subClassOf vair:MakingPrediction ;
+    skos:definition ""@en ;
+    skos:inScheme <https://w3id.org/vair#> ;
+    skos:prefLabel "Predicting Recidivism"@en ;
+    skos:related vair:LawEnforcement .
+
+vair:PredictingReoccurrenceOfCriminalOffence
+    a owl:Class, owl:NamedIndividual, skos:Concept, vair:Concept ;
+    rdfs:isDefinedBy <https://w3id.org/vair#> ;
+    rdfs:subClassOf airo:Purpose, vair:MakingPrediction ;
+    skos:definition ""@en ;
+    skos:inScheme <https://w3id.org/vair#> ;
+    skos:prefLabel "Predicting Reoccurrence Of Criminal Offence"@en ;
+    skos:related vair:LawEnforcement .
+
+vair:Prediction
+    a owl:Class, owl:NamedIndividual, skos:Concept, vair:Concept ;
+    rdfs:isDefinedBy <https://w3id.org/vair#> ;
+    rdfs:subClassOf airo:Output ;
+    skos:definition "primary output of an AI system when provided with input data or information.[ISO/IEC 22989, 3.1.27]"@en ;
+    skos:inScheme <https://w3id.org/vair#> ;
+    skos:prefLabel "Prediction"@en .
+
+vair:Principle
+    a owl:Class, owl:NamedIndividual, skos:Concept, vair:Concept ;
+    rdfs:isDefinedBy <https://w3id.org/vair#> ;
+    rdfs:subClassOf airo:ImpactedArea ;
+    skos:definition ""@en ;
+    skos:inScheme <https://w3id.org/vair#> ;
+    skos:prefLabel "Principle"@en .
+
+vair:PrioritisationOfEmergencyService
+    a owl:Class, owl:NamedIndividual, skos:Concept, vair:Concept ;
+    rdfs:isDefinedBy <https://w3id.org/vair#> ;
+    rdfs:subClassOf airo:Purpose, vair:Planning ;
+    skos:definition "Establishing priority in the dispatching of emergency first response services, including by firefighters and medical aid"@en ;
+    skos:inScheme <https://w3id.org/vair#> ;
+    skos:prefLabel "Prioritisation Of Emergency Service"@en ;
+    skos:related vair:PublicService .
+
+vair:PrivateService
+    a owl:Class, owl:NamedIndividual, skos:Concept, vair:Concept ;
+    rdfs:isDefinedBy <https://w3id.org/vair#> ;
+    rdfs:subClassOf airo:Domain ;
+    skos:definition ""@en ;
+    skos:inScheme <https://w3id.org/vair#> ;
+    skos:prefLabel "Private Service"@en .
+
+vair:ProducingRecommendation
+    a owl:Class, owl:NamedIndividual, skos:Concept, vair:Concept ;
+    rdfs:isDefinedBy <https://w3id.org/vair#> ;
+    rdfs:subClassOf airo:Purpose ;
+    skos:definition "producing meaningful recommendations to users of the system"@en ;
+    skos:inScheme <https://w3id.org/vair#> ;
+    skos:prefLabel "Producing Recommendation"@en .
+
+vair:Product
+    a owl:Class, owl:NamedIndividual, skos:Concept, vair:Concept ;
+    rdfs:isDefinedBy <https://w3id.org/vair#> ;
+    rdfs:subClassOf airo:AISystemForm ;
+    skos:definition ""@en ;
+    skos:inScheme <https://w3id.org/vair#> ;
+    skos:prefLabel "Product"@en .
+
+vair:ProductManufacturer
+    a owl:Class, owl:NamedIndividual, skos:Concept, vair:Concept ;
+    rdfs:isDefinedBy <https://w3id.org/vair#> ;
+    rdfs:subClassOf airo:Stakeholder ;
+    skos:definition "a manufacturer within the meaning of any of the Union harmonisation legislation listed in Annex II of the AI Act."@en ;
+    skos:inScheme <https://w3id.org/vair#> ;
+    skos:prefLabel "Product Manufacturer"@en .
+
+vair:ProductionData
+    a owl:NamedIndividual, skos:Concept, vair:Concept ;
+    rdfs:isDefinedBy <https://w3id.org/vair#> ;
+    skos:definition "data acquired during the operation phase of an AI system, for which a deployed AI system calculates a predicted output or inference. [ISO/IEC 22989, 3.2.12]"@en ;
+    skos:inScheme <https://w3id.org/vair#> ;
+    skos:prefLabel "Production Data"@en .
+
+vair:Profiling
+    a owl:Class, owl:NamedIndividual, skos:Concept, vair:Concept ;
+    rdfs:isDefinedBy <https://w3id.org/vair#> ;
+    rdfs:subClassOf airo:Capability ;
+    skos:definition ""@en ;
+    skos:inScheme <https://w3id.org/vair#> ;
+    skos:prefLabel "Profiling"@en .
+
+vair:ProfilingPeople
+    a owl:NamedIndividual, skos:Concept, vair:Concept ;
+    rdfs:isDefinedBy <https://w3id.org/vair#> ;
+    skos:definition "Profiling of natural persons"@en ;
+    skos:inScheme <https://w3id.org/vair#> ;
+    skos:prefLabel "Profiling People"@en .
+
+vair:ProsecutingCriminalOffences
+    a owl:Class, owl:NamedIndividual, skos:Concept, vair:Concept ;
+    rdfs:isDefinedBy <https://w3id.org/vair#> ;
+    rdfs:subClassOf airo:Purpose ;
+    skos:definition ""@en ;
+    skos:inScheme <https://w3id.org/vair#> ;
+    skos:prefLabel "Prosecuting Criminal Offences"@en ;
+    skos:related vair:LawEnforcement .
+
+vair:ProsecutionOfCriminalOffences
+    a owl:NamedIndividual, skos:Concept, vair:Concept ;
+    rdfs:isDefinedBy <https://w3id.org/vair#> ;
+    skos:definition ""@en ;
+    skos:inScheme <https://w3id.org/vair#> ;
+    skos:prefLabel "Prosecution Of Criminal Offences"@en .
+
+vair:PsychologicalHarm
+    a owl:Class, owl:NamedIndividual, skos:Concept, vair:Concept ;
+    rdfs:isDefinedBy <https://w3id.org/vair#> ;
+    rdfs:subClassOf airo:WellbeingImpact ;
+    skos:definition ""@en ;
+    skos:inScheme <https://w3id.org/vair#> ;
+    skos:prefLabel "Psychological Harm"@en .
+
+vair:PsychologicalHealth
+    a owl:Class, owl:NamedIndividual, skos:Concept, vair:Concept ;
+    rdfs:isDefinedBy <https://w3id.org/vair#> ;
+    rdfs:subClassOf vair:Health ;
+    skos:definition ""@en ;
+    skos:inScheme <https://w3id.org/vair#> ;
+    skos:prefLabel "Psychological Health"@en .
+
+vair:PublicAuthority
+    a owl:Class, owl:NamedIndividual, skos:Concept, vair:Concept ;
+    rdfs:isDefinedBy <https://w3id.org/vair#> ;
+    rdfs:subClassOf airo:AIUser ;
+    skos:definition ""@en ;
+    skos:inScheme <https://w3id.org/vair#> ;
+    skos:prefLabel "Public Authority"@en .
+
+vair:PublicAuthorityRepresentative
+    a owl:Class, owl:NamedIndividual, skos:Concept, vair:Concept ;
+    rdfs:isDefinedBy <https://w3id.org/vair#> ;
+    rdfs:subClassOf airo:AIUser ;
+    skos:definition "an entity that acts on behalf of public authorities"@en ;
+    skos:inScheme <https://w3id.org/vair#> ;
+    skos:prefLabel "Public Authority Representative"@en .
+
+vair:PublicService
+    a owl:Class, owl:NamedIndividual, skos:Concept, vair:Concept ;
+    rdfs:isDefinedBy <https://w3id.org/vair#> ;
+    rdfs:subClassOf airo:Domain ;
+    skos:definition ""@en ;
+    skos:inScheme <https://w3id.org/vair#> ;
+    skos:prefLabel "Public Service"@en .
+
+vair:PublicServicesApplicant
+    a owl:Class, owl:NamedIndividual, skos:Concept, vair:Concept ;
+    rdfs:isDefinedBy <https://w3id.org/vair#> ;
+    rdfs:subClassOf airo:AISubject ;
+    skos:definition "A person who has applied for public services and benefits"@en ;
+    skos:inScheme <https://w3id.org/vair#> ;
+    skos:prefLabel "Public Services Applicant"@en .
+
+vair:PubliclyAccessibleSpace
+    a owl:NamedIndividual, skos:Concept, vair:Concept ;
+    rdfs:isDefinedBy <https://w3id.org/vair#> ;
+    skos:definition ""@en ;
+    skos:inScheme <https://w3id.org/vair#> ;
+    skos:prefLabel "Publicly Accessible Space"@en .
+
+vair:QuestionAnswering
+    a owl:Class, owl:NamedIndividual, skos:Concept, vair:Concept ;
+    rdfs:isDefinedBy <https://w3id.org/vair#> ;
+    rdfs:subClassOf airo:Capability ;
+    skos:definition "determining the most appropriate answer to a question provided in natural language.  [ISO/IEC 22989, 3.6.14]"@en ;
+    skos:inScheme <https://w3id.org/vair#> ;
+    skos:prefLabel "Question Answering"@en .
+
+vair:ReEvaluation
+    a owl:Class, owl:NamedIndividual, skos:Concept, vair:Concept ;
+    rdfs:isDefinedBy <https://w3id.org/vair#> ;
+    rdfs:subClassOf airo:AILifecyclePhase ;
+    skos:definition ""@en ;
+    skos:inScheme <https://w3id.org/vair#> ;
+    skos:prefLabel "Re-Evaluation"@en .
+
+vair:ReasoningTechnique
+    a owl:Class, owl:NamedIndividual, skos:Concept, vair:Concept ;
+    rdfs:isDefinedBy <https://w3id.org/vair#> ;
+    rdfs:subClassOf airo:Technique ;
+    skos:definition ""@en ;
+    skos:inScheme <https://w3id.org/vair#> ;
+    skos:prefLabel "ReasoningTechnique"@en .
+
+vair:ReclaimingPublicAssistanceServices
+    a owl:Class, owl:NamedIndividual, skos:Concept, vair:Concept ;
+    rdfs:isDefinedBy <https://w3id.org/vair#> ;
+    rdfs:subClassOf airo:Purpose, vair:DecisionMaking ;
+    skos:definition ""@en ;
+    skos:inScheme <https://w3id.org/vair#> ;
+    skos:prefLabel "Reclaiming Public Assistance Services"@en ;
+    skos:related vair:PublicService .
+
+vair:Recommendation
+    a owl:Class, owl:NamedIndividual, skos:Concept, vair:Concept ;
+    rdfs:isDefinedBy <https://w3id.org/vair#> ;
+    rdfs:subClassOf airo:Output ;
+    skos:definition ""@en ;
+    skos:inScheme <https://w3id.org/vair#> ;
+    skos:prefLabel "Recommendation"@en .
+
+vair:RecommenderSystem
+    a owl:Class, owl:NamedIndividual, skos:Concept, vair:Concept ;
+    rdfs:isDefinedBy <https://w3id.org/vair#> ;
+    rdfs:subClassOf airo:AISystem ;
+    skos:definition ""@en ;
+    skos:inScheme <https://w3id.org/vair#> ;
+    skos:prefLabel "Recommender System"@en ;
+    skos:related vair:MachineLearningTechnique .
+
+vair:Recruiting
+    a owl:Class, owl:NamedIndividual, skos:Concept, vair:Concept ;
+    rdfs:isDefinedBy <https://w3id.org/vair#> ;
+    rdfs:subClassOf airo:Purpose, vair:Assessment ;
+    skos:definition ""@en ;
+    skos:inScheme <https://w3id.org/vair#> ;
+    skos:prefLabel "Recruiting"@en .
+
+vair:RecurrentNeuralNetwork
+    a owl:Class, owl:NamedIndividual, skos:Concept, vair:Concept ;
+    rdfs:isDefinedBy <https://w3id.org/vair#> ;
+    rdfs:subClassOf vair:NeuralNetwork ;
+    skos:definition "neural network in which outputs from both the previous layer and the previous processing step are fed into the current layer.  [ISO/IEC 22989 3.4.10]"@en ;
+    skos:inScheme <https://w3id.org/vair#> ;
+    skos:prefLabel "Recurrent Neural Network"@en .
+
+vair:ReducingPublicAssistanceServices
+    a owl:Class, owl:NamedIndividual, skos:Concept, vair:Concept ;
+    rdfs:isDefinedBy <https://w3id.org/vair#> ;
+    rdfs:subClassOf airo:Purpose, vair:DecisionMaking ;
+    skos:definition ""@en ;
+    skos:inScheme <https://w3id.org/vair#> ;
+    skos:prefLabel "Reducing Public Assistance Services"@en ;
+    skos:related vair:PublicService .
+
+vair:ReinforcementLearning
+    a owl:Class, owl:NamedIndividual, skos:Concept, vair:Concept ;
+    rdfs:isDefinedBy <https://w3id.org/vair#> ;
+    rdfs:subClassOf vair:MachineLearningTechnique ;
+    skos:definition "learning of an optimal sequence of actions to maximize a reward through interaction with an environment [ISO/IEC 22989, 3.3.9]"@en ;
+    skos:inScheme <https://w3id.org/vair#> ;
+    skos:prefLabel "Reinforcement Learning"@en .
+
+vair:RelationshipExtraction
+    a owl:Class, owl:NamedIndividual, skos:Concept, vair:Concept ;
+    rdfs:isDefinedBy <https://w3id.org/vair#> ;
+    rdfs:subClassOf airo:Capability ;
+    skos:definition "identifying relationships among entities mentioned in a text. [ISO/IEC 22989, 3.6.15]"@en ;
+    skos:inScheme <https://w3id.org/vair#> ;
+    skos:prefLabel "Relationship Extraction"@en .
+
+vair:RemoteBiometricIdentification
+    a owl:NamedIndividual, skos:Concept, vair:Concept ;
+    rdfs:isDefinedBy <https://w3id.org/vair#> ;
+    skos:definition "Identifying natural persons at a distance through the comparison of a person’s biometric data with the biometric data contained in a reference database."@en ;
+    skos:inScheme <https://w3id.org/vair#> ;
+    skos:prefLabel "RemoteBiometricIdentification"@en .
+
+vair:RemoteIdentificationOfPeople
+    a owl:Class, owl:NamedIndividual, skos:Concept, vair:Concept ;
+    rdfs:isDefinedBy <https://w3id.org/vair#> ;
+    rdfs:subClassOf airo:Purpose, vair:Identifying ;
+    skos:definition ""@en ;
+    skos:inScheme <https://w3id.org/vair#> ;
+    skos:prefLabel "Remote Identification Of People"@en .
+
+vair:ResidencePermitApplicant
+    a owl:Class, owl:NamedIndividual, skos:Concept, vair:Concept ;
+    rdfs:isDefinedBy <https://w3id.org/vair#> ;
+    rdfs:subClassOf airo:AISubject ;
+    skos:definition "A person who has applied for a residence permit"@en ;
+    skos:inScheme <https://w3id.org/vair#> ;
+    skos:prefLabel "Residence Permit Applicant"@en .
+
+vair:Retirement
+    a owl:Class, owl:NamedIndividual, skos:Concept, vair:Concept ;
+    rdfs:isDefinedBy <https://w3id.org/vair#> ;
+    rdfs:subClassOf airo:AILifecyclePhase ;
+    skos:definition ""@en ;
+    skos:inScheme <https://w3id.org/vair#> ;
+    skos:prefLabel "Retirement"@en .
+
+vair:ReversingOutcome
+    a owl:Class, owl:NamedIndividual, skos:Concept, vair:Concept ;
+    rdfs:isDefinedBy <https://w3id.org/vair#> ;
+    rdfs:subClassOf airo:MitigationControl ;
+    skos:definition "Reversing the outcome of a system."@en ;
+    skos:inScheme <https://w3id.org/vair#> ;
+    skos:prefLabel "Reversing Outcome"@en ;
+    skos:related vair:Outcome .
+
+vair:RevokingPublicAssistanceServices
+    a owl:Class, owl:NamedIndividual, skos:Concept, vair:Concept ;
+    rdfs:isDefinedBy <https://w3id.org/vair#> ;
+    rdfs:subClassOf airo:Purpose, vair:DecisionMaking ;
+    skos:definition ""@en ;
+    skos:inScheme <https://w3id.org/vair#> ;
+    skos:prefLabel "Revoking Public Assistance Services"@en ;
+    skos:related vair:PublicService .
+
+vair:Right
+    a owl:Class, owl:NamedIndividual, skos:Concept, vair:Concept ;
+    rdfs:isDefinedBy <https://w3id.org/vair#> ;
+    rdfs:subClassOf airo:ImpactedArea ;
+    skos:definition ""@en ;
+    skos:inScheme <https://w3id.org/vair#> ;
+    skos:prefLabel "Right"@en .
+
+vair:RobotSystem
+    a owl:Class, owl:NamedIndividual, skos:Concept, vair:Concept ;
+    rdfs:isDefinedBy <https://w3id.org/vair#> ;
+    rdfs:subClassOf airo:AISystem ;
+    skos:definition "automation system with actuators that performs intended tasks in the physical world, by means of sensing its environment and a software control system. [ISO/IEC 22989, 3.1.29]"@en ;
+    skos:inScheme <https://w3id.org/vair#> ;
+    skos:prefLabel "Robot System"@en .
+
+vair:SVM
+    a owl:NamedIndividual, skos:Concept, vair:Concept ;
+    rdfs:isDefinedBy <https://w3id.org/vair#> ;
+    skos:definition ""@en ;
+    skos:inScheme <https://w3id.org/vair#> ;
+    skos:prefLabel "SVM"@en ;
+    skos:related vair:SupportVectorMachine .
+
+vair:Safety
+    a owl:Class, owl:NamedIndividual, skos:Concept, vair:Concept ;
+    rdfs:isDefinedBy <https://w3id.org/vair#> ;
+    rdfs:subClassOf airo:ImpactedArea ;
+    skos:definition ""@en ;
+    skos:inScheme <https://w3id.org/vair#> ;
+    skos:prefLabel "Safety"@en .
+
+vair:SafetyComponent
+    a owl:Class, owl:NamedIndividual, skos:Concept, vair:Concept ;
+    rdfs:isDefinedBy <https://w3id.org/vair#> ;
+    rdfs:subClassOf airo:AISystemForm ;
+    skos:definition ""@en ;
+    skos:inScheme <https://w3id.org/vair#> ;
+    skos:prefLabel "Safety Component"@en .
+
+vair:SearchMethod
+    a owl:Class, owl:NamedIndividual, skos:Concept, vair:Concept ;
+    rdfs:isDefinedBy <https://w3id.org/vair#> ;
+    rdfs:subClassOf vair:StatisticalTechnique ;
+    skos:definition ""@en ;
+    skos:inScheme <https://w3id.org/vair#> ;
+    skos:prefLabel "Search Method"@en .
+
+vair:SelfEmployment
+    a owl:NamedIndividual, skos:Concept, vair:Concept .
+
+vair:SemiSupervisedLearning
+    a owl:Class, owl:NamedIndividual, skos:Concept, vair:Concept ;
+    rdfs:isDefinedBy <https://w3id.org/vair#> ;
+    rdfs:subClassOf vair:MachineLearningTechnique ;
+    skos:definition "machine learning that makes use of both labelled and unlabelled data during training [ISO/IEC 22989, 3.3.11]"@en ;
+    skos:inScheme <https://w3id.org/vair#> ;
+    skos:prefLabel "Semi Supervised Learning"@en .
+
+vair:SentimentAnalysis
+    a owl:Class, owl:NamedIndividual, skos:Concept, vair:Concept ;
+    rdfs:isDefinedBy <https://w3id.org/vair#> ;
+    rdfs:subClassOf airo:Capability ;
+    skos:definition "computationally identifying and categorizing opinions expressed in a piece of text, speech or image, to determine a range of feeling such as from positive to negative. [ISO/IEC 22989, 3.6.16]"@en ;
+    skos:inScheme <https://w3id.org/vair#> ;
+    skos:prefLabel "Sentiment Analysis"@en .
+
+vair:Service
+    a owl:Class, owl:NamedIndividual, skos:Concept, vair:Concept ;
+    rdfs:isDefinedBy <https://w3id.org/vair#> ;
+    rdfs:subClassOf airo:AISystemForm ;
+    skos:definition ""@en ;
+    skos:inScheme <https://w3id.org/vair#> ;
+    skos:prefLabel "Service"@en .
+
+vair:ServiceRobot
+    a owl:Class, owl:NamedIndividual, skos:Concept, vair:Concept ;
+    rdfs:isDefinedBy <https://w3id.org/vair#> ;
+    rdfs:subClassOf vair:RobotSystem ;
+    skos:definition ""@en ;
+    skos:inScheme <https://w3id.org/vair#> ;
+    skos:prefLabel "Service Robot"@en .
+
+vair:SmallScaleProvider
+    a owl:Class, owl:NamedIndividual, skos:Concept, vair:Concept ;
+    rdfs:isDefinedBy <https://w3id.org/vair#> ;
+    rdfs:subClassOf airo:AIProvider ;
+    skos:definition "a provider that  is a micro (has fewer than 10 employee and annual turnover or balance sheet below €2 million) or small enterprise (has fewer than 50 employee and annual turnover or balance sheet below €10 million) "@en ;
+    skos:inScheme <https://w3id.org/vair#> ;
+    skos:prefLabel "Small Scale Provider"@en .
+
+vair:SocialRobot
+    a owl:Class, owl:NamedIndividual, skos:Concept, vair:Concept ;
+    rdfs:isDefinedBy <https://w3id.org/vair#> ;
+    rdfs:subClassOf vair:RobotSystem ;
+    skos:definition ""@en ;
+    skos:inScheme <https://w3id.org/vair#> ;
+    skos:prefLabel "Social Robot"@en .
+
+vair:Software
+    a owl:Class, owl:NamedIndividual, skos:Concept, vair:Concept ;
+    rdfs:isDefinedBy <https://w3id.org/vair#> ;
+    rdfs:subClassOf airo:AISystemForm ;
+    skos:definition ""@en ;
+    skos:inScheme <https://w3id.org/vair#> ;
+    skos:prefLabel "Software"@en .
+
+vair:SoundEventRecognition
+    a owl:Class, owl:NamedIndividual, skos:Concept, vair:Concept ;
+    rdfs:isDefinedBy <https://w3id.org/vair#> ;
+    rdfs:subClassOf airo:Capability ;
+    skos:definition ""@en ;
+    skos:inScheme <https://w3id.org/vair#> ;
+    skos:prefLabel "Sound Event Recognition"@en .
+
+vair:SoundSourceSeparation
+    a owl:Class, owl:NamedIndividual, skos:Concept, vair:Concept ;
+    rdfs:isDefinedBy <https://w3id.org/vair#> ;
+    rdfs:subClassOf airo:Capability ;
+    skos:definition ""@en ;
+    skos:inScheme <https://w3id.org/vair#> ;
+    skos:prefLabel "Sound Source Separation"@en .
+
+vair:SoundSynthesis
+    a owl:Class, owl:NamedIndividual, skos:Concept, vair:Concept ;
+    rdfs:isDefinedBy <https://w3id.org/vair#> ;
+    rdfs:subClassOf airo:Capability ;
+    skos:definition ""@en ;
+    skos:inScheme <https://w3id.org/vair#> ;
+    skos:prefLabel "Sound Synthesis"@en .
+
+vair:SpeakerRecognition
+    a owl:Class, owl:NamedIndividual, skos:Concept, vair:Concept ;
+    rdfs:isDefinedBy <https://w3id.org/vair#> ;
+    rdfs:subClassOf airo:Capability ;
+    skos:definition ""@en ;
+    skos:inScheme <https://w3id.org/vair#> ;
+    skos:prefLabel "Speaker Recognition"@en .
+
+vair:SpeechRecognition
+    a owl:Class, owl:NamedIndividual, skos:Concept, vair:Concept ;
+    rdfs:isDefinedBy <https://w3id.org/vair#> ;
+    rdfs:subClassOf airo:Capability ;
+    skos:definition "converting a speech signal to a representation of the content of the speech. [ISO/IEC 22989, 3.6.17]"@en ;
+    skos:inScheme <https://w3id.org/vair#> ;
+    skos:prefLabel "Speech Recognition"@en .
+
+vair:SpeechSynthesis
+    a owl:Class, owl:NamedIndividual, skos:Concept, vair:Concept ;
+    rdfs:isDefinedBy <https://w3id.org/vair#> ;
+    rdfs:subClassOf airo:Capability ;
+    skos:definition "generation of artificial speech. [ISO/IEC 22989, 3.6.18]"@en ;
+    skos:inScheme <https://w3id.org/vair#> ;
+    skos:prefLabel "Speech Synthesis"@en .
+
+vair:StaffIncompetence
+    a owl:Class, owl:NamedIndividual, skos:Concept, vair:Concept ;
+    rdfs:isDefinedBy <https://w3id.org/vair#> ;
+    rdfs:subClassOf airo:OrganisationalRiskSource ;
+    skos:definition "Incompetence of staff such as human oversight actors"@en ;
+    skos:inScheme <https://w3id.org/vair#> ;
+    skos:prefLabel "Staff Incompetence"@en .
+
+vair:StatisticalTechnique
+    a owl:Class, owl:NamedIndividual, skos:Concept, vair:Concept ;
+    rdfs:isDefinedBy <https://w3id.org/vair#> ;
+    rdfs:subClassOf airo:Technique ;
+    skos:definition ""@en ;
+    skos:inScheme <https://w3id.org/vair#> ;
+    skos:prefLabel "Statistical Technique"@en .
+
+vair:SupervisedLearning
+    a owl:Class, owl:NamedIndividual, skos:Concept, vair:Concept ;
+    rdfs:isDefinedBy <https://w3id.org/vair#> ;
+    rdfs:subClassOf vair:MachineLearningTechnique ;
+    skos:definition "machine learning that makes only use of labelled data during training [ISO/IEC 22989, 3.3.11]"@en ;
+    skos:inScheme <https://w3id.org/vair#> ;
+    skos:prefLabel "Supervised Learning"@en .
+
+vair:SupportVectorMachine
+    a owl:Class, owl:NamedIndividual, skos:Concept, vair:Concept ;
+    rdfs:isDefinedBy <https://w3id.org/vair#> ;
+    rdfs:subClassOf vair:MachineLearningAlgorithm ;
+    skos:definition "machine learning algorithm  that finds decision boundaries with maximal margins. [ISO/IEC 22989 3.3.13]"@en ;
+    skos:inScheme <https://w3id.org/vair#> ;
+    skos:prefLabel "Support Vector Machine"@en .
+
+vair:Suspect
+    a owl:Class, owl:NamedIndividual, skos:Concept, vair:Concept ;
+    rdfs:isDefinedBy <https://w3id.org/vair#> ;
+    rdfs:subClassOf airo:AISubject ;
+    skos:definition "A person who is being accused of criminal offences"@en ;
+    skos:inScheme <https://w3id.org/vair#> ;
+    skos:prefLabel "Suspect"@en .
+
+vair:SymbolicReasoning
+    a owl:Class, owl:NamedIndividual, skos:Concept, vair:Concept ;
+    rdfs:isDefinedBy <https://w3id.org/vair#> ;
+    rdfs:subClassOf vair:KnowledgeBasedTechnique ;
+    skos:definition ""@en ;
+    skos:inScheme <https://w3id.org/vair#> ;
+    skos:prefLabel "Symbolic Reasoning"@en .
+
+vair:SystemVulnerability
+    a owl:Class, owl:NamedIndividual, skos:Concept, vair:Concept ;
+    rdfs:isDefinedBy <https://w3id.org/vair#> ;
+    rdfs:subClassOf airo:SystemRiskSource ;
+    skos:definition "Weakness of a system can be exploited by one or more threats. [Source: ISO/IEC TR 24028, 3.48 with modifications]"@en ;
+    skos:inScheme <https://w3id.org/vair#> ;
+    skos:prefLabel "System Vulnerability"@en .
+
+vair:TensorProcessingUnit
+    a owl:Class, owl:NamedIndividual, skos:Concept, vair:Concept ;
+    rdfs:isDefinedBy <https://w3id.org/vair#> ;
+    rdfs:subClassOf vair:ApplicationSpecificIntegratedCircuit ;
+    skos:definition ""@en ;
+    skos:inScheme <https://w3id.org/vair#> ;
+    skos:prefLabel "Tensor Processing Unit"@en .
+
+vair:TestData
+    a owl:NamedIndividual, skos:Concept, vair:Concept ;
+    rdfs:isDefinedBy <https://w3id.org/vair#> ;
+    skos:definition "data used to assess the performance of a final model. [ISO/IEC 22989, 3.2.14]"@en ;
+    skos:inScheme <https://w3id.org/vair#> ;
+    skos:prefLabel "Test Data"@en .
+
+vair:Testing
+    a owl:NamedIndividual, skos:Concept, vair:Concept ;
+    rdfs:isDefinedBy <https://w3id.org/vair#> ;
+    skos:definition ""@en ;
+    skos:inScheme <https://w3id.org/vair#> ;
+    skos:prefLabel "Testing"@en .
+
+vair:Tool
+    a owl:Class, owl:NamedIndividual, skos:Concept, vair:Concept ;
+    rdfs:isDefinedBy <https://w3id.org/vair#> ;
+    rdfs:subClassOf airo:AIComponent ;
+    skos:definition "A tool that has been used in development of an AI system."@en ;
+    skos:inScheme <https://w3id.org/vair#> ;
+    skos:prefLabel "Tool"@en .
+
+vair:TrainedModel
+    a owl:Class, owl:NamedIndividual, skos:Concept, vair:Concept ;
+    rdfs:isDefinedBy <https://w3id.org/vair#> ;
+    rdfs:subClassOf vair:Model ;
+    skos:definition "result of model training [ISO/IEC 22989, 3.3.14]"@en ;
+    skos:inScheme <https://w3id.org/vair#> ;
+    skos:prefLabel "Trained Model"@en ;
+    skos:related vair:ModelTraning .
+
+vair:Training
+    a owl:Class, owl:NamedIndividual, skos:Concept, vair:Concept ;
+    rdfs:isDefinedBy <https://w3id.org/vair#> ;
+    rdfs:subClassOf airo:OrganisationalControl ;
+    skos:definition ""@en, "Providing training to staff, users, etc."@en ;
+    skos:inScheme <https://w3id.org/vair#> ;
+    skos:prefLabel "Training"@en .
+
+vair:TrainingData
+    a owl:NamedIndividual, skos:Concept, vair:Concept ;
+    rdfs:isDefinedBy <https://w3id.org/vair#> ;
+    skos:definition "data used to train a machine learning model.  [ISO/IEC 22989, 3.3.16]"@en ;
+    skos:inScheme <https://w3id.org/vair#> ;
+    skos:prefLabel "Training Data"@en ;
+    skos:related vair:MachineLearningModel .
+
+vair:UnavailabilityOfDataSet
+    a owl:Class, owl:NamedIndividual, skos:Concept, vair:Concept ;
+    rdfs:isDefinedBy <https://w3id.org/vair#> ;
+    rdfs:subClassOf airo:DataRiskSource ;
+    skos:definition ""@en ;
+    skos:inScheme <https://w3id.org/vair#> ;
+    skos:prefLabel "Unavailability Of Data Set"@en .
+
+vair:UnrepresentativeTestData
+    a owl:Class, owl:NamedIndividual, skos:Concept, vair:Concept ;
+    rdfs:isDefinedBy <https://w3id.org/vair#> ;
+    rdfs:subClassOf airo:TestDataRiskSource ;
+    skos:definition ""@en ;
+    skos:inScheme <https://w3id.org/vair#> ;
+    skos:prefLabel "Unrepresentative Test Data"@en ;
+    skos:related vair:TestData .
+
+vair:UnrepresentativeTrainingData
+    a owl:Class, owl:NamedIndividual, skos:Concept, vair:Concept ;
+    rdfs:isDefinedBy <https://w3id.org/vair#> ;
+    rdfs:subClassOf airo:TrainingDataRiskSource ;
+    skos:definition ""@en ;
+    skos:inScheme <https://w3id.org/vair#> ;
+    skos:prefLabel "Unrepresentative Training Data"@en ;
+    skos:related vair:TrainingData .
+
+vair:UnrepresentativeValidationData
+    a owl:Class, owl:NamedIndividual, skos:Concept, vair:Concept ;
+    rdfs:isDefinedBy <https://w3id.org/vair#> ;
+    rdfs:subClassOf airo:ValidationDataRiskSource ;
+    skos:definition ""@en ;
+    skos:inScheme <https://w3id.org/vair#> ;
+    skos:prefLabel "Unrepresentative Validation Data"@en ;
+    skos:related vair:ValidationData .
+
+vair:UnsupervisedLearning
+    a owl:Class, owl:NamedIndividual, skos:Concept, vair:Concept ;
+    rdfs:isDefinedBy <https://w3id.org/vair#> ;
+    rdfs:subClassOf vair:MachineLearningTechnique ;
+    skos:definition "machine learning that makes only use of unlabelled data during training [ISO/IEC 22989, 3.3.17]"@en ;
+    skos:inScheme <https://w3id.org/vair#> ;
+    skos:prefLabel "Unsupervised Learning"@en .
+
+vair:Validation
+    a owl:Class, owl:NamedIndividual, skos:Concept, vair:Concept ;
+    rdfs:isDefinedBy <https://w3id.org/vair#> ;
+    rdfs:subClassOf airo:AILifecyclePhase ;
+    skos:definition ""@en ;
+    skos:inScheme <https://w3id.org/vair#> ;
+    skos:prefLabel "Validation"@en .
+
+vair:ValidationData
+    a owl:NamedIndividual, skos:Concept, vair:Concept ;
+    rdfs:isDefinedBy <https://w3id.org/vair#> ;
+    skos:definition "data used to compare the performance of different candidate models.   [ISO/IEC 22989, 3.2.15]"@en ;
+    skos:inScheme <https://w3id.org/vair#> ;
+    skos:prefLabel "Validation Data"@en .
+
+vair:Verification
+    a owl:Class, owl:NamedIndividual, skos:Concept, vair:Concept ;
+    rdfs:isDefinedBy <https://w3id.org/vair#> ;
+    rdfs:subClassOf airo:AILifecyclePhase ;
+    skos:definition ""@en ;
+    skos:inScheme <https://w3id.org/vair#> ;
+    skos:prefLabel "Verification"@en .
+
+vair:VerificationOfAsylumSeekerClaims
+    a owl:Class, owl:NamedIndividual, skos:Concept, vair:Concept ;
+    rdfs:isDefinedBy <https://w3id.org/vair#> ;
+    rdfs:subClassOf airo:Purpose ;
+    skos:definition ""@en ;
+    skos:inScheme <https://w3id.org/vair#> ;
+    skos:prefLabel "Verification Of Asylum Seeker Claims"@en .
+
+vair:VerificationOfMigrationSeekerClaims
+    a owl:Class, owl:NamedIndividual, skos:Concept, vair:Concept ;
+    rdfs:isDefinedBy <https://w3id.org/vair#> ;
+    rdfs:subClassOf airo:Purpose ;
+    skos:definition ""@en ;
+    skos:inScheme <https://w3id.org/vair#> ;
+    skos:prefLabel "Verification Of Migration Seeker Claims"@en ;
+    skos:related vair:Migration .
+
+vair:VerifyingAuthenticityOfTravelDocument
+    a owl:Class, owl:NamedIndividual, skos:Concept, vair:Concept ;
+    rdfs:isDefinedBy <https://w3id.org/vair#> ;
+    rdfs:subClassOf vair:Assessment ;
+    skos:definition "Verifying of the authenticity of travel documents and supporting documentation of natural persons and detection of non-authentic documents by checking their security features."@en ;
+    skos:inScheme <https://w3id.org/vair#> ;
+    skos:prefLabel "Verifying Authenticity Of Travel Document"@en .
+
+vair:Victim
+    a owl:Class, owl:NamedIndividual, skos:Concept, vair:Concept ;
+    rdfs:isDefinedBy <https://w3id.org/vair#> ;
+    rdfs:subClassOf airo:AISubject ;
+    skos:definition "Victim of a crime"@en ;
+    skos:inScheme <https://w3id.org/vair#> ;
+    skos:prefLabel "Victim"@en .
+
+vair:VisaApplicant
+    a owl:Class, owl:NamedIndividual, skos:Concept, vair:Concept ;
+    rdfs:isDefinedBy <https://w3id.org/vair#> ;
+    rdfs:subClassOf airo:AISubject ;
+    skos:definition "A person who has applied for a visa"@en ;
+    skos:inScheme <https://w3id.org/vair#> ;
+    skos:prefLabel "Visa Applicant"@en .
+
+vair:WrongDataSetDesignChoice
+    a owl:Class, owl:NamedIndividual, skos:Concept, vair:Concept ;
+    rdfs:isDefinedBy <https://w3id.org/vair#> ;
+    rdfs:subClassOf airo:DataRiskSource ;
+    skos:definition ""@en ;
+    skos:inScheme <https://w3id.org/vair#> ;
+    skos:prefLabel "Wrong Data Set Design Choice"@en .
